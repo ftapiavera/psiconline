@@ -1,0 +1,156 @@
+body{
+    background-color: #F0EAF1;
+}
+
+.header{
+    background-color: #F0EAF1;
+    color:#7C7182;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.header a{
+    color:#7C7182;
+    text-decoration: none;
+    text-align: center;
+    font-family:'Roboto',sans-serif;
+    font-size: 17px;
+    
+}
+.container{
+    width:40%;
+    max-width: 1850px;
+}
+.logo-psico{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-psico img{
+    width: 610px;
+    height: 130px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 30px;
+    margin-right: 30px;
+}
+
+nav a:hover{
+    color:rgb(174, 120, 225);
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding:10px 0px
+    }
+}
+
+#buscador{
+    width:60%;
+    float: right;
+    
+  }
+  
+  #buscador input[type="search"]{
+    width:65%;
+    height: 38px;
+    border:2px solid rgb(230, 224, 224);
+    border-radius: 5px 5px 5px 5px;
+    float: right;
+    margin-right: 140px;
+    
+  }
+
+
+  #buscador form{
+    width:60%;
+    float: right;
+
+  }
+
+  #text{
+    float: left;
+    color:#655D69;
+    margin-left: 120px;
+    font-family: 'Candara';
+    font-size: 18px;
+    font-style: Bold italic;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px 50px;
+    align-items: center;
+    margin-bottom: 20px;
+
+  }
+
+  #image-font img{
+    float: right;
+    width: 500px;
+    height: 500px;
+    padding: 40px 120px;
+  }
+
+  .dropdown {
+    margin:20px auto 40px auto;	
+    border:1px solid #d9d9d9;
+    height:30px;
+    overflow: hidden;
+    width: 250px;
+    position:relative;
+
+ }
+ select {
+    background: white;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    color:#6a6666;
+    font-family: 'lato';
+ }
+ select:focus{ outline: none;}
+ 
+ .dropdown::after{
+     content:"\025be";
+     display:table-cell;
+     padding-top:7px;
+     text-align:center;
+     width:60px;
+     height:30px;
+     background-color:white;
+     position:absolute;
+     top:0;
+     right:0px;	
+     pointer-events: none;
+
+ }
+
+ .button{
+    background-color: #7F55BD;
+    border: none;
+    color: white;
+    padding: 12px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 1px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-left: 140px;
+    border-radius: 5px 5px 5px 5px;
+}
+.button1:hover {
+    box-shadow: 0 20px 16px 0 rgba(102, 99, 99, 0.24),0 20px 30px 0 rgba(99, 96, 96, 0.19);
+
+}
