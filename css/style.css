@@ -326,3 +326,70 @@ body {
     color: inherit; 
     text-decoration: inherit;
   }
+
+#titulo{
+    font-size: 42px;
+    color:#7F55BD;
+    font-family: Candara;
+    text-align: center;
+    padding: 20px;
+}
+#texto{
+    font-size: 20px;
+    font-family: Candara;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+
+}
+
+#img1 img{
+    padding: 40px;
+    width: 550px;
+    height: 350px;
+    align-items: center;
+}
+
+.contenedor-registro h2{
+    font-size: 60px;
+    font-family: Candara;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7F55BD;
+}
+
+.contenedor-registro{
+    display: flex;
+    align-items: center;
+    width:100%;
+    max-width: 600px;
+    position: relative;
+    left: 30%;
+}
+.contenedor-registro form{
+    width:100%;
+    padding: 80px 20px;
+    background: #fff;
+    position: center;
+    border-radius: 20px;
+}
+
+.contenedor-registro form input{
+    width: 100%;
+    font-family: Candara;
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background: #f2f2f2;
+    font-size: 18px;
+}
+
+.contenedor-registro form button{
+    padding: 15px 20px;
+    font-family: Candara;
+    border-radius: 20px;
+    background: #7F55BD;
+    margin-top: 20px;
+    color: white;
+}
