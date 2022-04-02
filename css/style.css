@@ -106,11 +106,9 @@ nav a:hover{
 }
 
   .searchbox {
-      width: 300px;
+      width: 500px;
       text-align: center;
       position: relative;
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
   }
 
   .dropdown {
@@ -124,7 +122,6 @@ nav a:hover{
  select {
     background: white;
     border: none;
-    font-size: 14px;
     height: 30px;
     padding: 5px;
     width: 250px;
@@ -163,8 +160,8 @@ body {
     position: relative;
     display: inline-block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    background-color: #e62e46;
+    font-size: 12px;
+    background-color: #7F55BD;
     border-radius: 4px;
     width: 220px;
     text-align: left;
@@ -173,8 +170,8 @@ body {
   .dropdown > a,
   .dropdown > span {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    padding: 15px 25px 15px 15px;
+    font-size: 13px;
+    padding: 10px 25px 10px 10px;
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -184,8 +181,8 @@ body {
   .dropdown > a:before,
   .dropdown > span:before {
     position: absolute;
-    right: 20px;
-    top: 25px;
+    right: 25px;
+    top: 15px;
     content: " ";
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -229,6 +226,7 @@ body {
     background-color: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175);
     width: 220px;
+    z-index: 100;
   }
   
   .dropdown input[type="checkbox"]:checked + ul {
