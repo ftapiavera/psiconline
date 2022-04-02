@@ -5,3 +5,5 @@
 - Beatriz Macarena Segura Pasten
 - Nicole Francisca Navarrete Flores
 - Felipe Eduardo Tapia Vera
+
+El documento de funcionalidades y los prototipos se encuentran en la carpeta documentos y prototipo respectivamente.
