@@ -24,9 +24,10 @@ body {
 }
 .display-2--description {
   font-size: 1.4rem;
-  display: block;
+  display: inline-block;
   margin-top: 1.2rem;
   text-transform: none;
+
 }
 
 .heading-line::before {
