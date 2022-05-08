@@ -24,4 +24,6 @@ Garantizar una vida sana y promover el bienestar para todos en todas las edades.
 - Felipe Eduardo Tapia Vera
 
 El documento de funcionalidades y los prototipos se encuentran en la carpeta documentos y prototipo respectivamente.
+
+
 Link de figma con las vistas: https://www.figma.com/file/WSD1mMTjbnkyAyukrWxJHo/Untitled?node-id=0%3A1
