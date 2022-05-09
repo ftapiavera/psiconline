@@ -18,10 +18,10 @@ Garantizar una vida sana y promover el bienestar para todos en todas las edades.
 12. Los usuarios pueden registrar opiniones sobre el profesional junto a una valoración de acuerdo a su experiencia con este.
 
 ## Integrantes:
-- Cristofer Alexsander Pizarro Reyes
 - Beatriz Macarena Segura Pasten
 - Nicole Francisca Navarrete Flores
 - Felipe Eduardo Tapia Vera
+- Cristofer Alexsander Pizarro Reyes (Retirado del Grupo)
 
 El documento de funcionalidades y los prototipos se encuentran en la carpeta documentos y prototipo respectivamente.
 
