@@ -29,6 +29,16 @@ footer{
   color: #fff;
   width: 100%;
 }
+.blog {
+  background-color: #fff;
+  border-radius: 50px;
+}
+.blog-post {
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
 .especi {
   padding-top: 40px;
   padding-bottom: 40px;
