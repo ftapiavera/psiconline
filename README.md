@@ -27,3 +27,5 @@ El documento de funcionalidades y los prototipos se encuentran en la carpeta doc
 
 
 Link de figma con las vistas: https://www.figma.com/file/WSD1mMTjbnkyAyukrWxJHo/Untitled?node-id=0%3A1
+Para la realización del diseño web de la plataforma nos basamos en sitios para citas psicológicas recomendadas, entre ellas https://www.psicologosonline.cl/. En
+particular se eligió una organización de secciones donde la barra de navegación se encuentra a la derecha ya que le otorga usabilidad al momento de navegar por secciones.
