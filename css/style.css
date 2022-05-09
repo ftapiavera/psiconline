@@ -15,20 +15,24 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+section {
+  background-image: url("../imgs/fondo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 nav {
   background-color: #f0eaf1;
 }
 footer{
   background-color: #635676;
-  padding: 2%;
-  margin-top: 5%;
+  padding-top: 5%;
   color: #fff;
   width: 100%;
 }
 .especi {
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 20%;
+  padding-left: 10%;
   color: #777578;
   font-weight: 300;
   font-family: "Poppins", sans-serif;
