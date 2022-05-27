@@ -1,28 +1,29 @@
-<div class="container">
-    <div class="row">
-        <div class="display-2--description lh-base text-black-50 col-12 text-center">Iniciar Sesión</div>
-        <h6 class="text-center" style="color: #777578;">Ingresa tus datos para iniciar sesión</h6>
-      </div>
 
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="display-2--description lh-base text-black-50 col-6 text-center">
-                  <div class="col-10 display-2--description lh-base mt-4 mb-4">
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text bg-white border-0 p-lg-3 fas fa-user"></span>
-                        <input type="text" class="form-control border-0" placeholder="Usuario">
-                  </div><br>
-                  <div class="input-group flex-nowrap">
-                    <span class="input-group-text bg-white border-0 p-lg-3 fas fa-key"></span>
-                    <input type="text" class="form-control border-0" placeholder="Contraseña">
-              </div>
-                </div>
-                <div class="col-12 display-2--description lh-base">
-                    <div class="input-group flex-nowrap">
-                        <div class="col"><button class="btn btn-primary btn-lg"> Iniciar Sesión</button></div>
-                  </div>
-                </div>
-        </div>
-        <div class="col-3"></div>
+    <div class="box-root padding-top--10 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 8;">
+      <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        <h3><a rel="dofollow">Iniciar sesión</a></h3>
       </div>
-  </div>
+      <div class="formbg-outer">
+        <div class="formbg">
+          <div class="formbg-inner padding-horizontal--48">
+            <span class="padding-bottom--15">Ingresa tus datos para iniciar sesión</span>
+            <form id="stripe-login">
+              <div class="field padding-bottom--24">
+                <input type="email" name="email" placeholder="Email">
+              </div>
+              <div class="field padding-bottom--24">
+                <div class="grid--50-50">
+                </div>
+                <input type="password" name="password" placeholder="Contraseña">
+              </div>
+              <div class="reset-pass">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+              </div>
+              <div class="field padding-bottom--20">
+                <input type="submit" name="submit" value="Iniciar sesión">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
