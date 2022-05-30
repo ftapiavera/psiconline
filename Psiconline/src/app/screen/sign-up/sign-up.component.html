@@ -1,32 +1,32 @@
-<div class="container">
-    <div class="row">
-        <div class="display-2--description lh-base text-black-50 col-12 text-center">Registrate</div>
-        <h6 class="text-center" style="color: #777578;">Ingresa tus datos para crear una cuenta</h6>
-      </div>
 
-      <div class="row justify-content-center">
-        <div class="display-2--description lh-base text-black-50 col-6 text-center">
-            <div class="display-2--description lh-base mt-9 mb-4">
-              <div class="input-group flex-nowrap">
-                <input type="text" class="form-control border-0" placeholder="Nombre">&nbsp;
-                <input type="text" class="form-control border-0" placeholder="Apellidos">
-              </div><br>
-                <div class="input-group flex-nowrap">
-                  <input type="text" class="form-control border-0" placeholder="Correo Electrónico">
-                </div><br>
-            
-                <div class="input-group flex-nowrap">
-                  <input type="password" class="form-control border-0" placeholder="Contraseña">
-                </div><br>
-                <div class="input-group flex-nowrap">
-                  <input type="password" class="form-control border-0" placeholder="Repetir Contraseña">
-                </div>
-            </div>
-            <div class="col-12 display-2--description lh-base">
-              <div class="input-group flex-nowrap">
-                <div class="col"><button class="btn btn-primary btn-lg">Registrarse</button></div>
-              </div>
-            </div>
-          </div>
+    <div class="box-root padding-top--10 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 8;">
+      <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        <h3><a rel="dofollow">Registrarse</a></h3>
       </div>
-  </div>
+      <div class="formbg-outer">
+        <div class="formbg">
+          <div class="formbg-inner padding-horizontal--48">
+            <span class="padding-bottom--15">Ingresa tus datos para registrarte</span>
+            <div class="reset-pass">
+              <a routerLink="/login">¿Ya tienes cuenta? inicia sesión acá</a>
+            </div>
+            <form [formGroup]="formSignUp" (ngSubmit)="submit()" id="stripe-signup" action="" method="post">
+              <div class="field padding-bottom--24">
+                <input formControlName="name" type="name" name="name" placeholder="Nombre">
+                <input formControlName="lastname" type="lastname" name="lastname" placeholder="Apellido">
+                <input formControlName="email" type="email" name="email" ngModel [email]="true" placeholder="Email">
+              </div>
+              <div class="field padding-bottom--24">
+                <div class="grid--50-50">
+                </div>
+                <input formControlName="password" type="password" name="password" placeholder="Contraseña">
+                <input formControlName="passwordrepeat" type="password" name="passwordrepeat" placeholder="Repetir contraseña">
+              </div>
+              <div class="field padding-bottom--20">
+                <input type="submit" name="submit" value="Resgistrarse">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
