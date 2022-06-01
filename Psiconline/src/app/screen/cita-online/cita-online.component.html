@@ -4,23 +4,48 @@
       <h5>Encuentra y agenda citas con profesionales de psicología especialistas en numerosos temas de salud mental de manera presencial y remota.</h5></div>
     <div class="row">
       <div class="display-2--description lh-base text-black-50 col-6 text-center" id="reserva">
-               <div class="d-grid gap-2 d-md-block">
-                  <button class="btn btn-primary btn-lg" routerLink="/citaPresencial">Cita presencial</button>
-                  <button class="btn btn-primary active btn-lg" routerLink="/citaOnline">Cita online</button>
+               <div ngbNav [(activeId)]="activeId" class="d-grid gap-2 d-md-block">
+                  <button [ngbNavItem]="1"class="btn btn-primary btn-lg"><i ngbNavLink>Cita presencial</i></button>
+                  <button [ngbNavItem]="2" class="btn btn-primary btn-lg"><i ngbNavLink>Cita online</i></button>
                 </div>
-                <select class="form-select form-select-lg" id="select">
-                  <option selected>Especialidad a tratar</option>
-                  <option value="1">Ansiedad</option>
-                  <option value="2">Depresión</option>
-                  <option value="3">Duelo</option>
-                </select>
-         
-              <div class="col-12 display-2--description lh-base">
-                  <div class="input-group flex-nowrap">
-                      <div class="col">
-                        <button class="btn btn-primary btn-lg"> Buscar</button></div>
+                <div *ngIf="activeId==1">
+                  <select class="form-select form-select-lg" id="select">
+                    <option selected>Especialidad a tratar</option>
+                    <option value="1">Ansiedad</option>
+                    <option value="2">Depresión</option>
+                    <option value="3">Duelo</option>
+                  </select>
+                  <select class="form-select form-select-lg" id="select">
+                    <option selected>seleccionar la comuna</option>
+                    <option value="1">Quilpue</option>
+                    <option value="2">Viña del Mar</option>
+                    <option value="3">Valparaiso</option>
+                  </select>
+           
+                  <div class="col-12 display-2--description lh-base">
+                      <div class="input-group flex-nowrap">
+                          <div class="col">
+                            <button class="btn btn-primary btn-lg"> Buscar</button></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                
+                <div *ngIf="activeId==2">
+                  <select class="form-select form-select-lg" id="select">
+                    <option selected>Especialidad a tratar</option>
+                    <option value="1">Ansiedad</option>
+                    <option value="2">Depresión</option>
+                    <option value="3">Duelo</option>
+                  </select>
+          
+                  <div class="col-12 display-2--description lh-base">
+                      <div class="input-group flex-nowrap">
+                          <div class="col">
+                            <button class="btn btn-primary btn-lg"> Buscar</button>
+                          </div>
+                      </div>
+                  </div>
+                </div>
       </div>
       <div class="col-6  display-2--description lh-base">
           <img src="assets/pro.png" class="img-fluid">

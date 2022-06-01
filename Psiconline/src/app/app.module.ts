@@ -13,6 +13,8 @@ import { BlogComponent } from './screen/blog/blog.component';
 import { SignUpComponent } from './screen/sign-up/sign-up.component';
 import { LoginComponent } from './screen/login/login.component';
 import { SearchComponent } from './components/search/search.component';
+import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { SearchComponent } from './components/search/search.component';
     BlogComponent,
     SignUpComponent,
     LoginComponent,
-    SearchComponent
+    SearchComponent,
+    ResultadoBusquedaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

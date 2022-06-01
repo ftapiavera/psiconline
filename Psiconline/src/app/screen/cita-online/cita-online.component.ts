@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cita-online.component.sass']
 })
 export class CitaOnlineComponent implements OnInit {
-
+  activeId=2;
   constructor() { }
 
   ngOnInit(): void {
