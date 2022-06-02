@@ -30,65 +30,71 @@
         </nav>
 
         <section id="home" class="intro-section">
-            <div class="container dashboard">
-                <div class="row">
+            <div class="container dashboard col-3 col-sm-4 col-md-6 col-lg-12">
+                <div class="row col-xs-6 col-sm-8 col-md-8 col-lg-12">
                     <div class="sidemenu">
                         <ul class="sidemenuelements">
                             <a href="#"><button class="boton-menu"><li>Perfil</li></button></a>
                             <a href="dashboardMedico.html"><li>Menú principal</li></a>
-                            <a href="#"><li>Disponibilidad</li></a>
+                            <a href="disponibilidadMedico.html"><li>Disponibilidad</li></a>
                             <a href="proximascitasMedico.html"><li>Próximas citas</li></a>
                             <a href="pacientesMedico.html"><li>Pacientes</li></a>
-                            <a href="#"><li>Historial</li></a>
+                            <a href="historialMedico.html"><li>Historial</li></a>
                         </ul>
                     </div>
                 </div>
-                <div class="main">
+                <div class="main p-5">
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col-3 col-sm-4 col-md-1 col-lg-9">
                             <h6>
                                 Bienvenido/a profesional Francisco Carvajal
                             </h6>
                             <div class="d-inline-block align-top">
-                                <img style="height:140px;" src="imgs/perfil-medico.png">
+                                <div class="col-md-2">
+                                    <img style="height:165px;" src="imgs/perfil-medico.png">
+                                </div>
                             </div>   
-                            <div class= "d-inline-block ms-4">
+                            <div class= "row d-inline-block ms-2 mt-1 col-md-5 col-lg-8">
                                 <h6 style="font-weight: bold;">Información del contacto</h6>
-                                <label for="nombre" class="form-label">Nombre:</label>
-                                <input class="form-control" id="disabledInput" type="text" placeholder="Francisco Carvajal" disabled>
-                                <label for="rut" class="form-label">Rut:</label>
-                                <input class="form-control" id="disabledInput" type="text" placeholder="10.999.000-3" disabled>
+                                <div class="form-group">
+                                    <label for="nombre" class="form-label">Nombre:</label>
+                                    <input class="form-control" id="disabledInput" type="text" placeholder="Francisco Carvajal" disabled>
+                                    <label for="rut" class="form-label">Rut:</label>
+                                    <input class="form-control" id="disabledInput" type="text" placeholder="10.999.000-3" disabled>
+                                </div>
                             </div>
-                            <form>
-                                <div class="mb-3">
-                                <label for="emailMedico" class="form-label">Mail:</label>
-                                <input type="email" class="form-control w-100" id="emailMedico">
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="mb-3">
+                                        <label for="emailMedico" class="form-label">Mail:</label>
+                                        <input type="email" class="form-control w-100" id="emailMedico" name="mail" value="franciscocarvajalpsicologo@gmail.com">
+                                    </div>
                                 </div>
                                 <div class="mb-3">
-                                <label for="numTelefonico" class="form-label">Número telefónico</label>
-                                <input type="number" class="form-control w-100" id="numTelefonico">
+                                    <label for="numTelefonico" class="form-label">Número telefónico:</label>
+                                    <input type="tel" class="form-control w-100" id="numTelefonico" name="telefono" value="+569 97432821">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="consultaPresencial" class="form-label">Consulta presencial</label>
-                                    <input type="text" class="form-control w-40" id="ConsultaPresencial">
-                                    <input type="text" class="form-control w-40" id="ConsultaPresencial">
+                                <label for="consultaPresencial" class="form-label">Consulta presencial:</label>
+                                <div class="mb-3 col-4 input-group">
+                                    <input type="text" class="form-control w-40" id="ConsultaPresencial" name="comuna" placeholder="Comuna" value="">
+                                    <input type="text" class="form-control w-40" id="ConsultaPresencial" name="direccion" placeholder="Dirección" value="">
                                 </div>
                             </form> 
                         </div> 
-                        <div class="col-3">
-                            <div class="clasificacion">
+                        <div class="col-3 col-sm-4 col-md-7 col-lg-3">
+                            <div class="border border-dark clasificacion">
                                 <p>Clasificación de usuarios</p>
-                                <ul style="color:yellow;">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
+                                <ul style="color:rgb(255, 196, 0); display:contents;">
+                                    <li><i class="fas fa-star fa-lg"></i></li>
+                                    <li><i class="fas fa-star fa-lg"></i></li>
+                                    <li><i class="fas fa-star fa-lg"></i></li>
+                                    <li><i class="fas fa-star fa-lg"></i></li>
+                                    <li><i class="fas fa-star-half-alt fa-lg"></i></li>
                                 </ul>
                             </div>
                         </div>
 
-                    </div>       
+                    </div>  
                    
             </div>
 
