@@ -1,0 +1,29 @@
+  
+  <div class="container-fluid text-center" id="block">  
+    <div class="col-6">
+      <h5>Encuentra y agenda citas con profesionales de psicología especialistas en numerosos temas de salud mental de manera presencial y remota.</h5></div>
+    <div class="row">
+      <div class="display-2--description lh-base text-black-50 col-6 text-center" id="reserva">
+               <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary btn-lg" routerLink="/citaPresencial"><i>Cita presencial</i></button>
+                  <button class="btn btn-primary btn-lg active" routerLink="/citaOnline"><i>Cita online</i></button>
+                </div>
+                  <select class="form-select form-select-lg" id="select">
+                    <option selected>Especialidad a tratar</option>
+                    <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
+                  </select>
+          
+                  <div class="col-12 display-2--description lh-base">
+                      <div class="input-group flex-nowrap">
+                          <div class="col" >
+                            <button class="btn btn-primary btn-lg"> Buscar</button>
+                          </div>
+                      </div>
+                  </div>
+              
+      </div>
+      <div class="col-6  display-2--description lh-base">
+          <img src="assets/pro.png" class="img-fluid">
+        </div>
+    </div>
+  </div>

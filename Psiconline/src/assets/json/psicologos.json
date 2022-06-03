@@ -1,0 +1,13 @@
+[{
+        "nombre" : "Lidia Fernandez",
+        "universidad" : "Universidad de Valparaiso",
+        "tratamiento" : ["ansiedad","depresion","psicologia infantil"],
+        "ciudad" : "Valparaiso",
+        "tipoConsulta" : ["presencial","online"],
+        "direccion" : ["Cerro Concepcion 1850, oficina 3", "Valparaiso"],
+        "telefono": "+56987656755",
+        "rut" : "15287340-4",
+        "mail" : "fernandez.lidia@gmail.com",
+        "calificacion" : 4.7
+    
+    }]
