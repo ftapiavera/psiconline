@@ -15,6 +15,7 @@ import { LoginComponent } from './screen/login/login.component';
 import { SearchComponent } from './components/search/search.component';
 import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {DatoDemoService} from './dato-demo.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [DatoDemoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
