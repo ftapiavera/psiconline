@@ -16,6 +16,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {DatoDemoService} from './dato-demo.service';
+import { NavDashboardPsicologoComponent } from './components/nav-dashboard-psicologo/nav-dashboard-psicologo.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {DatoDemoService} from './dato-demo.service';
     SignUpComponent,
     LoginComponent,
     SearchComponent,
-    ResultadoBusquedaComponent
+    ResultadoBusquedaComponent,
+    NavDashboardPsicologoComponent
   ],
   imports: [
     BrowserModule,

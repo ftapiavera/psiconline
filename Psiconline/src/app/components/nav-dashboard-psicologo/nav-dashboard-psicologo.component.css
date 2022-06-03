@@ -1,0 +1,30 @@
+.boton-menu{
+    background-color:rgb(202, 174, 227);
+    border: rgb(183, 135, 228);
+    border-radius: 6px;
+    width: 100%;
+    padding: 0.1px 2px;
+    color:#6f6574;
+  }
+  .sidemenu {
+    border-radius: 10px;
+    padding: 20px;
+    color: #777578;
+    display: inline-block;
+    margin-top: 0.1rem;
+    padding-left: 1rem;
+}
+.sidemenu ul {
+    text-align: left;
+    padding:10px;
+}
+
+.sidemenuelements li{
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    padding: 5px 15px;
+}
+.sidemenuelements li:hover{
+  color:rgb(174, 120, 225);
+}
