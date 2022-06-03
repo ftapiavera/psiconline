@@ -273,4 +273,12 @@ a {
   list-style:none;
   display:inline-block;
 }
+.input-group-append {
+  cursor: pointer;
+}
+.datepicker{
+  background-color: white;
+  margin-top:150px;
+  margin-left:65px;
+}
 
