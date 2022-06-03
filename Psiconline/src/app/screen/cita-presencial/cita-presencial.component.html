@@ -9,15 +9,11 @@
                 </div>
                 <select class="form-select form-select-lg" id="select">
                   <option selected>Especialidad a tratar</option>
-                  <option value="1">Ansiedad</option>
-                  <option value="2">Depresión</option>
-                  <option value="3">Duelo</option>
+                  <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
                 </select>
                 <select class="form-select form-select-lg" id="select">
                   <option selected>seleccionar la comuna</option>
-                  <option value="1">Quilpue</option>
-                  <option value="2">Viña del Mar</option>
-                  <option value="3">Valparaiso</option>
+                  <option *ngFor="let ciudad of ciudades" value={{ciudad.id}}>{{ciudad.nombre}}</option>
                 </select>
          
               <div class="col-12 display-2--description lh-base">

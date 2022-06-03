@@ -4,7 +4,6 @@ import jquery=require('jquery');
 const $:JQueryStatic=jquery;
 
 (function () {
-  'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll('.needs-validation')
@@ -30,26 +29,8 @@ const $:JQueryStatic=jquery;
 })
 
 export class SignUpComponent implements OnInit {
-  user!:string;
 
   ngOnInit(): void {
-      name: new FormControl('');
-      lastname: new FormControl('');
-      email: new FormControl('');
-      password: new FormControl('');
-      passwordrepeat: new FormControl('');
-
-  }
-  formSignUp = new FormGroup({
-    name: new FormControl(''),
-    lastname: new FormControl(''),
-    email: new FormControl('',[Validators.required,Validators.pattern("@")]),
-    password: new FormControl(''),
-    passwordrepeat: new FormControl(''),
-  })
-
-  submit(){
-    this.user='nombre=${this.formSignUp.value.nombre}lastname=${this.formSignUp.value.lastname}email=${this.formSignUp.value.email}password=${this.formSignUp.value.password}passwrdrepeat=${this.formSignUp.value.passwordrepeat}'
   }
 
 }

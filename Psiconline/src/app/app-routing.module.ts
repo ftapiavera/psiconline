@@ -7,6 +7,7 @@ import { AboutMeComponent } from './screen/about-me/about-me.component';
 import { BlogComponent } from './screen/blog/blog.component';
 import { LoginComponent } from './screen/login/login.component';
 import { SignUpComponent } from './screen/sign-up/sign-up.component';
+import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'aboutMe',component:AboutMeComponent},
   {path: 'blog',component:BlogComponent},
   {path: 'login',component:LoginComponent},
-  {path: 'signUp',component:SignUpComponent}
+  {path: 'signUp',component:SignUpComponent},
+  {path: 'resultadoBusqueda',component:ResultadoBusquedaComponent}
 ];
 
 @NgModule({

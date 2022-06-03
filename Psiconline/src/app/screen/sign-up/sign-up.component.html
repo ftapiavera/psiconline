@@ -10,23 +10,23 @@
             <div class="reset-pass">
               <a routerLink="/login">¿Ya tienes cuenta? inicia sesión acá</a>
             </div>
-            <form [formGroup]="formSignUp" (ngSubmit)="submit()" id="stripe-signup" action="" method="post">
+            <form  id="stripe-signup" action="" method="post">
               <div class="field padding-bottom--24">
                 <div>
-                  <label for="validationName" class="form-label"></label>
-                  <input formControlName="name" type="name" name="name" id="validationName" placeholder="Nombre">
+                  <label for="validationCustom01" class="form-label"></label>
+                  <input  type="name" name="name" id="validationCustom01" placeholder="Nombre">
                   <div class="valid-feedback">Correcto</div>
                   <div class="invalid-feedback">Ingrese un nombre</div>
                 </div>
                 <div>
                   <label for="validationLastName" class="form-label"></label>
-                  <input formControlName="lastname" type="lastname" id="validationLastName" name="lastname" placeholder="Apellido">
+                  <input  type="lastname" id="validationLastName" name="lastname" placeholder="Apellido">
                   <div class="valid-feedback">Correcto</div>
                   <div class="invalid-feedback">Ingrese un apellido</div>
                 </div>
                 <div>
                   <label for="validationMail" class="form-label"></label>
-                <input formControlName="email" type="email" name="email" id="validationMail" ngModel [email]="true" placeholder="Email">
+                <input  type="email" name="email" id="validationMail"  placeholder="Email">
                   <div class="valid-feedback">Correcto</div>
                   <div class="invalid-feedback">Ingrese un mail válido</div>
               </div>
@@ -34,14 +34,15 @@
               <div class="field padding-bottom--24">
                 <div class="grid--50-50">
                 </div>
-                <input formControlName="password" type="password" name="password" placeholder="Contraseña">
-                <input formControlName="passwordrepeat" type="password" name="passwordrepeat" placeholder="Repetir contraseña">
+                <input type="password" name="password" placeholder="Contraseña">
+                <input type="password" name="passwordrepeat" placeholder="Repetir contraseña">
               </div>
               <div class="field padding-bottom--20">
-                <input type="submit" name="submit" value="Resgistrarse">
+                <input type="submit" name="submit" value="Registrarse">
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <script data-main="/Psiconline/js/app/screen/sign-up/sign-up.component.js" src="/Psiconline/js/require-jquery.js"></script>
