@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormArray, EmailValidator, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormArray, EmailValidator, Validators, FormBuilder } from '@angular/forms';
 import jquery=require('jquery');
 const $:JQueryStatic=jquery;
 
@@ -29,8 +29,22 @@ const $:JQueryStatic=jquery;
 })
 
 export class SignUpComponent implements OnInit {
+  formulario:FormGroup;
 
+  constructor(public FormB:FormBuilder){
+    this.formulario = this.FormB.group({
+      nombre: ["",Validators.required],
+      apellido: ["",Validators.required],
+      email: ["",[Validators.required,Validators.email]],
+      password: ["",[Validators.required,Validators.maxLength(8)]],
+      passwordRepeat: ["",[Validators.required, Validators.maxLength(8)]]
+    })
+  }
   ngOnInit(): void {
+  }
+
+  validacion(){
+    console.log(this.formulario.value);
   }
 
 }

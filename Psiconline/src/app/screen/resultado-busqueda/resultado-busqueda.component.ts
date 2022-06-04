@@ -4,7 +4,7 @@ import { Psicologo } from 'src/app/models/psicologo.model';
 @Component({
   selector: 'app-resultado-busqueda',
   templateUrl: './resultado-busqueda.component.html',
-  styleUrls: ['./resultado-busqueda.component.css']
+  styleUrls: ['./resultado-busqueda.component.sass']
 })
 export class ResultadoBusquedaComponent implements OnInit {
 
