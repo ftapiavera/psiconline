@@ -19,6 +19,8 @@ const login_component_1 = require("./screen/login/login.component");
 const search_component_1 = require("./components/search/search.component");
 const resultado_busqueda_component_1 = require("./screen/resultado-busqueda/resultado-busqueda.component");
 const ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+const dato_demo_service_1 = require("./dato-demo.service");
+const nav_dashboard_psicologo_component_1 = require("./components/nav-dashboard-psicologo/nav-dashboard-psicologo.component");
 let AppModule = class AppModule {
 };
 AppModule = tslib_1.__decorate([
@@ -35,7 +37,8 @@ AppModule = tslib_1.__decorate([
             sign_up_component_1.SignUpComponent,
             login_component_1.LoginComponent,
             search_component_1.SearchComponent,
-            resultado_busqueda_component_1.ResultadoBusquedaComponent
+            resultado_busqueda_component_1.ResultadoBusquedaComponent,
+            nav_dashboard_psicologo_component_1.NavDashboardPsicologoComponent
         ],
         imports: [
             platform_browser_1.BrowserModule,
@@ -43,7 +46,7 @@ AppModule = tslib_1.__decorate([
             forms_1.ReactiveFormsModule,
             ng_bootstrap_1.NgbModule
         ],
-        providers: [],
+        providers: [dato_demo_service_1.DatoDemoService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

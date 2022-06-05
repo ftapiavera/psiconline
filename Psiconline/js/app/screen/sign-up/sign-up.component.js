@@ -3,25 +3,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SignUpComponent = void 0;
 const tslib_1 = require("tslib");
 const core_1 = require("@angular/core");
-const jquery = require("jquery");
-const $ = jquery;
-(function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation');
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
-})();
+const forms_1 = require("@angular/forms");
 let SignUpComponent = class SignUpComponent {
+    constructor(FormB) {
+        this.FormB = FormB;
+        this.activeId = 5;
+        this.formulario = this.FormB.group({
+            nombre: ["", forms_1.Validators.required],
+            apellido: ["", forms_1.Validators.required],
+            email: ["", [forms_1.Validators.required, forms_1.Validators.email]],
+            password: ["", [forms_1.Validators.required, forms_1.Validators.maxLength(8)]],
+            passwordRepeat: ["", [forms_1.Validators.required, forms_1.Validators.maxLength(8)]]
+        });
+    }
     ngOnInit() {
+    }
+    validacion() {
+        var _a, _b;
+        console.log(this.formulario.value);
+        if (((_a = this.formulario.get("password")) === null || _a === void 0 ? void 0 : _a.value) != ((_b = this.formulario.get("passwordRepeat")) === null || _b === void 0 ? void 0 : _b.value)) {
+            alert("Las contraseñas no son iguales");
+            document.body.innerHTML = ("ingresa contraseñas iguales");
+        }
     }
 };
 SignUpComponent = tslib_1.__decorate([

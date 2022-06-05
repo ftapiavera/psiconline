@@ -11,6 +11,7 @@ const about_me_component_1 = require("./screen/about-me/about-me.component");
 const blog_component_1 = require("./screen/blog/blog.component");
 const login_component_1 = require("./screen/login/login.component");
 const sign_up_component_1 = require("./screen/sign-up/sign-up.component");
+const resultado_busqueda_component_1 = require("./screen/resultado-busqueda/resultado-busqueda.component");
 const routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_screen_component_component_1.HomeScreenComponentComponent },
@@ -19,7 +20,8 @@ const routes = [
     { path: 'aboutMe', component: about_me_component_1.AboutMeComponent },
     { path: 'blog', component: blog_component_1.BlogComponent },
     { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'signUp', component: sign_up_component_1.SignUpComponent }
+    { path: 'signUp', component: sign_up_component_1.SignUpComponent },
+    { path: 'resultadoBusqueda', component: resultado_busqueda_component_1.ResultadoBusquedaComponent }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };

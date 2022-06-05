@@ -4,7 +4,13 @@ exports.ResultadoBusquedaComponent = void 0;
 const tslib_1 = require("tslib");
 const core_1 = require("@angular/core");
 let ResultadoBusquedaComponent = class ResultadoBusquedaComponent {
-    constructor() { }
+    constructor() {
+        this.psicologos = [];
+        this.psicologos = [
+            { nombre: "Lidia Fernandez", universidad: "Universidad de Valparaiso", tratamiento: "ansiedad", ciudad: "Valparaiso", tipoConsulta: "presencial", direccion: "Cerro Concepcion 1850, oficina 3", telefono: "+56987656755", rut: "15287340-4", mail: "fernandez.lidia@gmail.com", calificacion: 4.7 },
+            { nombre: "Francisco Carvajal", universidad: "Universidad Andres Bello", tratamiento: "ansiedad", ciudad: "Viña del Mar", tipoConsulta: "presencial", direccion: "Arlegui #3028, Edificio Vista Mar, oficina 23", telefono: "+56987708230", rut: "10999000-3", mail: "franciscocarvajalpsicologo@gmail.com", calificacion: 4.9 }
+        ];
+    }
     ngOnInit() {
     }
 };
@@ -12,7 +18,7 @@ ResultadoBusquedaComponent = tslib_1.__decorate([
     (0, core_1.Component)({
         selector: 'app-resultado-busqueda',
         templateUrl: './resultado-busqueda.component.html',
-        styleUrls: ['./resultado-busqueda.component.css']
+        styleUrls: ['./resultado-busqueda.component.sass']
     })
 ], ResultadoBusquedaComponent);
 exports.ResultadoBusquedaComponent = ResultadoBusquedaComponent;
