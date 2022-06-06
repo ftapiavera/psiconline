@@ -15,9 +15,6 @@ export class AppComponent {
   constructor (private service: DatoDemoService){}
 
   ngOnInit(){
-    this.service.get_profesionales().subscribe((profesionales: any) => {
-      this.profesionales = profesionales;
-    })
   }
 
 }

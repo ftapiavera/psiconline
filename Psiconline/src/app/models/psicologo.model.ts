@@ -1,9 +1,9 @@
 export interface Psicologo {
   nombre: string;
   universidad: string;
-  tratamiento: string;
+  tratamiento: Array<String>;
   ciudad: string;
-  tipoConsulta: string;
+  tipoConsulta: Array<string>;
   direccion: string;
   telefono: string;
   rut: string;

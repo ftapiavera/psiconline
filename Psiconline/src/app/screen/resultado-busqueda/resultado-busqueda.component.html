@@ -2,7 +2,7 @@
     <div class="row">
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action" aria-current="true"
-              *ngFor="let psicologo of psicologos"
+              *ngFor="let psicologo of dataDemo.get_profesionales()"
             >
               {{psicologo.nombre}}
               <p class="text-info">{{psicologo.rut}}</p>
