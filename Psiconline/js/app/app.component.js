@@ -4,8 +4,12 @@ exports.AppComponent = void 0;
 const tslib_1 = require("tslib");
 const core_1 = require("@angular/core");
 let AppComponent = class AppComponent {
-    constructor() {
+    constructor(service) {
+        this.service = service;
         this.title = 'Psiconline';
+        this.profesionales = {};
+    }
+    ngOnInit() {
     }
 };
 AppComponent = tslib_1.__decorate([

@@ -19,8 +19,9 @@ const login_component_1 = require("./screen/login/login.component");
 const search_component_1 = require("./components/search/search.component");
 const resultado_busqueda_component_1 = require("./screen/resultado-busqueda/resultado-busqueda.component");
 const ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
-const dato_demo_service_1 = require("./dato-demo.service");
+const dato_demo_service_1 = require("./service/data-demo/dato-demo.service");
 const nav_dashboard_psicologo_component_1 = require("./components/nav-dashboard-psicologo/nav-dashboard-psicologo.component");
+const http_1 = require("@angular/common/http");
 let AppModule = class AppModule {
 };
 AppModule = tslib_1.__decorate([
@@ -44,7 +45,8 @@ AppModule = tslib_1.__decorate([
             platform_browser_1.BrowserModule,
             app_routing_module_1.AppRoutingModule,
             forms_1.ReactiveFormsModule,
-            ng_bootstrap_1.NgbModule
+            ng_bootstrap_1.NgbModule,
+            http_1.HttpClientModule
         ],
         providers: [dato_demo_service_1.DatoDemoService],
         bootstrap: [app_component_1.AppComponent]

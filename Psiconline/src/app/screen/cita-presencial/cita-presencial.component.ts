@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tratamiento } from 'src/app/models/tratamiento.model';
 import { Ciudad } from 'src/app/models/ciudades.model';
+import {DatoDemoService} from 'src/app/service/data-demo/dato-demo.service';
 
 @Component({
   selector: 'app-cita-presencial',
