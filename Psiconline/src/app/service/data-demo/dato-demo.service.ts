@@ -17,4 +17,8 @@ export class DatoDemoService {
     var datos = this.http.get("assets/json/tratamientos.json");
     return datos;
   }
+  get_ciudades(): Observable<any>{
+    var datos = this.http.get("assets/json/ciudades.json");
+    return datos;
+  }
 }
