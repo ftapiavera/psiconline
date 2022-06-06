@@ -15,8 +15,9 @@ import { LoginComponent } from './screen/login/login.component';
 import { SearchComponent } from './components/search/search.component';
 import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {DatoDemoService} from './dato-demo.service';
+import {DatoDemoService} from './service/data-demo/dato-demo.service';
 import { NavDashboardPsicologoComponent } from './components/nav-dashboard-psicologo/nav-dashboard-psicologo.component';
+import {HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NavDashboardPsicologoComponent } from './components/nav-dashboard-psico
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [DatoDemoService],
   bootstrap: [AppComponent]

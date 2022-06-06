@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DatoDemoService} from './service/data-demo/dato-demo.service';
 
 
 @Component({
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Psiconline';
+
+  private profesionales:any = {};
+
+  constructor (private service: DatoDemoService){}
+
+  ngOnInit(){
+    this.service.get_profesionales().subscribe((profesionales: any) => {
+      this.profesionales = profesionales;
+    })
+  }
 
 }
