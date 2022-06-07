@@ -8,9 +8,8 @@
                   <button class="btn btn-primary btn-lg" routerLink="/citaPresencial"><i>Cita presencial</i></button>
                   <button class="btn btn-primary btn-lg active" routerLink="/citaOnline"><i>Cita online</i></button>
                 </div>
-                  <select class="form-select form-select-lg" id="select">
-                    <option selected>Especialidad a tratar</option>
-                    <option *ngFor="let tratamiento of demoData.get_tratamientos()" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
+                <select [(ngModel)]="selectedTratamiento.id" class="form-select form-select-lg" id="select">
+                    <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
                   </select>
           
                   <div class="col-12 display-2--description lh-base">

@@ -18,6 +18,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {DatoDemoService} from './service/data-demo/dato-demo.service';
 import { NavDashboardPsicologoComponent } from './components/nav-dashboard-psicologo/nav-dashboard-psicologo.component';
 import {HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DatoDemoService],
   bootstrap: [AppComponent]

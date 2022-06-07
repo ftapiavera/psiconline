@@ -34,6 +34,15 @@ let CitaPresencialComponent = class CitaPresencialComponent {
             { nombre: "Las Condes", id: 12 },
             { nombre: "Quilicura", id: 13 }
         ];
+        this.selectedTratamiento = null;
+        this.selectedCiudad = null;
+    }
+    selectTratamiento(tratamiento) {
+        this.selectedTratamiento = tratamiento;
+        console.log(this.selectTratamiento);
+    }
+    selectCiudad(ciudad) {
+        this.selectedCiudad = ciudad;
     }
     ngOnInit() {
     }

@@ -7,19 +7,17 @@
                   <button class="btn btn-primary active btn-lg" routerLink="/citaPresencial">Cita presencial</button>
                   <button class="btn btn-primary btn-lg" routerLink="/citaOnline">Cita online</button>
                 </div>
-                <select class="form-select form-select-lg" id="select">
-                  <option selected>Especialidad a tratar</option>
-                  <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
-                </select>
-                <select class="form-select form-select-lg" id="select">
-                  <option selected>seleccionar la comuna</option>
-                  <option *ngFor="let ciudad of ciudades" value={{ciudad.id}}>{{ciudad.nombre}}</option>
-                </select>
+                <select [(ngModel)]="selectedTratamiento.id" class="form-select form-select-lg" id="select">
+                    <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
+                  </select>
+                  <select [(ngModel)]="selectedCiudad.id" class="form-select form-select-lg" id="select">
+                    <option *ngFor="let ciudad of ciudades" value={{ciudad.id}}>{{ciudad.nombre}}</option>
+                  </select>
          
               <div class="col-12 display-2--description lh-base">
                   <div class="input-group flex-nowrap">
                       <div class="col">
-                        <button class="btn btn-primary btn-lg"> Buscar</button></div>
+                        <button type="submit" class="btn btn-primary btn-lg"> Buscar</button></div>
                 </div>
               </div>
       </div>

@@ -26,7 +26,6 @@ export class SignUpComponent implements OnInit {
     console.log(this.formulario.value);
     if (this.formulario.get("password")?.value!=this.formulario.get("passwordRepeat")?.value) {
       alert("Las contraseñas no son iguales");
-      document.body.innerHTML=("ingresa contraseñas iguales");
     }
   }
 
