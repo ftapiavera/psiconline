@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, EmailValidator, Validators, FormBuilder } from '@angular/forms';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,7 +11,8 @@ import { FormControl, FormGroup, FormArray, EmailValidator, Validators, FormBuil
 export class SignUpComponent implements OnInit {
   formulario:FormGroup;
   activeId:number=5;
-  constructor(public FormB:FormBuilder){
+  paciente ={};
+  constructor(public FormB:FormBuilder,private authService: AuthService){
     this.formulario = this.FormB.group({
       nombre: ["",Validators.required],
       apellido: ["",Validators.required],
@@ -27,6 +29,11 @@ export class SignUpComponent implements OnInit {
     if (this.formulario.get("password")?.value!=this.formulario.get("passwordRepeat")?.value) {
       alert("Las contraseñas no son iguales");
     }
+  }
+
+  signUp(){
+    this.authService.signUp(this.paciente)
+
   }
 
 
