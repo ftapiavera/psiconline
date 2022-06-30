@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, EmailValidator, Validators, FormBuilder } from '@angular/forms';
 import { AuthService } from 'src/app/service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,7 +13,9 @@ export class SignUpComponent implements OnInit {
   formulario:FormGroup;
   activeId:number=5;
   paciente ={};
-  constructor(public FormB:FormBuilder,private authService: AuthService){
+
+  constructor(public FormB:FormBuilder,private authService: AuthService,private router: Router){
+    
     this.formulario = this.FormB.group({
       nombre: ["",Validators.required],
       apellido: ["",Validators.required],
@@ -29,10 +32,23 @@ export class SignUpComponent implements OnInit {
     if (this.formulario.get("password")?.value!=this.formulario.get("passwordRepeat")?.value) {
       alert("Las contraseñas no son iguales");
     }
+    else{
+      this.signUp();
+    }
   }
 
   signUp(){
-    this.authService.signUp(this.paciente)
+    var nombre = this.formulario.get("nombre")?.value+" "+this.formulario.get("apellido")?.value;
+    this.paciente = {"nombre":nombre , "email": this.formulario.get("email")?.value,"password":this.formulario.get("password")?.value};
+    console.log(this.paciente);
+    this.authService.signUpUser(this.paciente)
+    .subscribe(res => {
+        console.log(res);
+        localStorage.setItem('token', res.token);
+        this.router.navigate(['/private']);
+      },
+      err => console.log(err)
+    )
 
   }
 
