@@ -10,6 +10,7 @@ import { SignUpComponent } from './screen/sign-up/sign-up.component';
 import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
 import { DashboardAdminComponent} from './screen/dashboard-admin/dashboard-admin.component';
 import { CreatePsicologoComponent} from './screen/create-psico/create-psico.component';
+import { DashboardPacienteComponent } from './screen/dashboard-paciente/dashboard-paciente.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'signUp',component:SignUpComponent},
   {path: 'resultadoBusqueda',component:ResultadoBusquedaComponent},
   {path: 'adminDash', component:DashboardAdminComponent},
-  {path: 'createPsicologo', component:CreatePsicologoComponent}
+  {path: 'createPsicologo', component:CreatePsicologoComponent},
+  {path: 'pacDash', component:DashboardPacienteComponent}
 ];
 
 @NgModule({
