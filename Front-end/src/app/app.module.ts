@@ -20,6 +20,7 @@ import { NavDashboardPsicologoComponent } from './components/nav-dashboard-psico
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { LoginAdminComponent } from './screen/loginAdmin/login-admin/login-admin.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     SearchComponent,
     ResultadoBusquedaComponent,
-    NavDashboardPsicologoComponent
+    NavDashboardPsicologoComponent,
+    LoginAdminComponent
   ],
   imports: [
     BrowserModule,

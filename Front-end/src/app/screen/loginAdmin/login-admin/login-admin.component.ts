@@ -5,35 +5,34 @@ import { FormControl, FormGroup, FormArray, EmailValidator, Validators, FormBuil
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  selector: 'app-login-admin',
+  templateUrl: './login-admin.component.html',
+  styleUrls: ['./login-admin.component.sass']
 })
-export class LoginComponent implements OnInit {
+export class LoginAdminComponent implements OnInit {
   formulario:FormGroup;
-  paciente ={};
+  administrador={};
   constructor(public FormB:FormBuilder,private authService: AuthService,private router: Router) {
     this.formulario = this.FormB.group({
-      email: ["",[Validators.required,Validators.email]],
+      usuario: ["",[Validators.required,Validators.email]],
       password: ["",[Validators.required,Validators.maxLength(8)]]
     })
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  login() {
-    this.paciente = this.formulario.value;
-    this.authService.login(this.paciente)
+  autorizacion(){
+    this.administrador = this.formulario.value;
+    console.log(this.administrador);
+    this.authService.login(this.administrador)
       .subscribe(
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/adminDash']);
         },
         err => console.log(err)
       )
   }
-
-
 }

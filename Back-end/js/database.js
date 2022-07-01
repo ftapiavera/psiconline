@@ -1,8 +1,11 @@
 "use strict";
+require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/psiconline-db', {
+mongoose.connect(process.env.DB_NAME, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    .then(() => console.log('Database is connected'))
+    .then(() => console.log('Base de datos conectada'))
     .catch((err) => console.log(err));
+
+var db = mongoose.connection;

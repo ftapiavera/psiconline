@@ -31,3 +31,7 @@ Para la realización del diseño web de la plataforma nos basamos en sitios para
 particular se eligió una organización de secciones donde la barra de navegación se encuentra a la derecha ya que le otorga usabilidad al momento de navegar por secciones.
 
 para hacer uso de backend debe inicializar el servidor con: npm run server
+
+Para ingresar como usuario Administrador se deben introducir las siguientes credenciales:
+{"usuario":"AdministradorPsiconline",
+"password":"87k3hT5gs821Hb6aw"}

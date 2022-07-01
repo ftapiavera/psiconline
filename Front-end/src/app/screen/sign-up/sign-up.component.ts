@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, EmailValidator, Validators, FormBuilder } from '@angular/forms';
 import { AuthService } from 'src/app/service/auth.service';
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
@@ -45,7 +46,6 @@ export class SignUpComponent implements OnInit {
     .subscribe(res => {
         console.log(res);
         localStorage.setItem('token', res.token);
-        this.router.navigate(['/private']);
       },
       err => console.log(err)
     )

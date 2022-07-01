@@ -1,4 +1,5 @@
 .DS_Store
+.env
 css/.DS_Store
 Documentos/.DS_Store
 imgs/.DS_Store
