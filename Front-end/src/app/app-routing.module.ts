@@ -8,6 +8,8 @@ import { BlogComponent } from './screen/blog/blog.component';
 import { LoginComponent } from './screen/login/login.component';
 import { SignUpComponent } from './screen/sign-up/sign-up.component';
 import { ResultadoBusquedaComponent } from './screen/resultado-busqueda/resultado-busqueda.component';
+import { DashboardAdminComponent} from './screen/dashboard-admin/dashboard-admin.component';
+import { CreatePsicologoComponent} from './screen/create-psico/create-psico.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'blog',component:BlogComponent},
   {path: 'login',component:LoginComponent},
   {path: 'signUp',component:SignUpComponent},
-  {path: 'resultadoBusqueda',component:ResultadoBusquedaComponent}
+  {path: 'resultadoBusqueda',component:ResultadoBusquedaComponent},
+  {path: 'adminDash', component:DashboardAdminComponent},
+  {path: 'createPsicologo', component:CreatePsicologoComponent}
 ];
 
 @NgModule({
