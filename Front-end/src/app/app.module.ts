@@ -20,6 +20,8 @@ import { NavDashboardPsicologoComponent } from './components/nav-dashboard-psico
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MensajePacienteComponent } from './screen/mensaje-paciente/mensaje-paciente.component';
+import { PerfilPacienteComponent } from './screen/perfil-paciente/perfil-paciente.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     SearchComponent,
     ResultadoBusquedaComponent,
-    NavDashboardPsicologoComponent
+    NavDashboardPsicologoComponent,
+    MensajePacienteComponent,
+    PerfilPacienteComponent
   ],
   imports: [
     BrowserModule,
