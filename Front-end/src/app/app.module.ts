@@ -21,6 +21,15 @@ import {HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LoginAdminComponent } from './screen/loginAdmin/login-admin/login-admin.component';
+import { MensajePacienteComponent } from './screen/mensaje-paciente/mensaje-paciente.component';
+import { PerfilPacienteComponent } from './screen/perfil-paciente/perfil-paciente.component';
+import { DashMedicoComponent } from './screen/dash-medico/dash-medico.component';
+import { PerfilMedicoComponent } from './screen/perfil-medico/perfil-medico.component';
+import { PacientesMedicoComponent } from './screen/pacientes-medico/pacientes-medico.component';
+import { HistorialMedicoComponent } from './screen/historial-medico/historial-medico.component';
+import { CitasMedicoComponent } from './screen/citas-medico/citas-medico.component';
+import { DisponibilidadMedicoComponent } from './screen/disponibilidad-medico/disponibilidad-medico.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +46,15 @@ import { LoginAdminComponent } from './screen/loginAdmin/login-admin/login-admin
     SearchComponent,
     ResultadoBusquedaComponent,
     NavDashboardPsicologoComponent,
-    LoginAdminComponent
+    LoginAdminComponent,
+    MensajePacienteComponent,
+    PerfilPacienteComponent,
+    DashMedicoComponent,
+    PerfilMedicoComponent,
+    PacientesMedicoComponent,
+    HistorialMedicoComponent,
+    CitasMedicoComponent,
+    DisponibilidadMedicoComponent
   ],
   imports: [
     BrowserModule,
