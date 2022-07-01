@@ -22,6 +22,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MensajePacienteComponent } from './screen/mensaje-paciente/mensaje-paciente.component';
 import { PerfilPacienteComponent } from './screen/perfil-paciente/perfil-paciente.component';
+import { DashMedicoComponent } from './screen/dash-medico/dash-medico.component';
+import { PerfilMedicoComponent } from './screen/perfil-medico/perfil-medico.component';
+import { PacientesMedicoComponent } from './screen/pacientes-medico/pacientes-medico.component';
+import { HistorialMedicoComponent } from './screen/historial-medico/historial-medico.component';
+import { CitasMedicoComponent } from './screen/citas-medico/citas-medico.component';
+import { DisponibilidadMedicoComponent } from './screen/disponibilidad-medico/disponibilidad-medico.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +45,13 @@ import { PerfilPacienteComponent } from './screen/perfil-paciente/perfil-pacient
     ResultadoBusquedaComponent,
     NavDashboardPsicologoComponent,
     MensajePacienteComponent,
-    PerfilPacienteComponent
+    PerfilPacienteComponent,
+    DashMedicoComponent,
+    PerfilMedicoComponent,
+    PacientesMedicoComponent,
+    HistorialMedicoComponent,
+    CitasMedicoComponent,
+    DisponibilidadMedicoComponent
   ],
   imports: [
     BrowserModule,
