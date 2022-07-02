@@ -7,21 +7,21 @@
                   <button class="btn btn-primary active btn-lg" routerLink="/citaPresencial">Cita presencial</button>
                   <button class="btn btn-primary btn-lg" routerLink="/citaOnline">Cita online</button>
                 </div>
-                <div>Seleccione tratamiento</div>
-                <select [(ngModel)]="selectedTratamiento.id" class="form-select form-select-lg" id="select">
-                    <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
-                  </select>
-                  <div>Seleccione Ciudad</div>
-                  <select [(ngModel)]="selectedCiudad.id" class="form-select form-select-lg" id="select">
-                    <option *ngFor="let ciudad of ciudades" value={{ciudad.id}}>{{ciudad.nombre}}</option>
-                  </select>
-         
-              <div class="col-12 display-2--description lh-base">
-                  <div class="input-group flex-nowrap">
-                      <div class="col">
-                        <button type="submit" class="btn btn-primary btn-lg"> Buscar</button></div>
-                </div>
-              </div>
+                  <div>Seleccione tratamiento</div>
+                  <select [(ngModel)]="selectedTratamiento.id" class="form-select form-select-lg" id="select">
+                      <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.nombre}}>{{tratamiento.nombre}}</option>
+                    </select>
+                    <div>Seleccione Ciudad</div>
+                    <select [(ngModel)]="selectedCiudad" class="form-select form-select-lg" id="select">
+                      <option *ngFor="let ciudad of ciudades" value={{ciudad.nombre}}>{{ciudad.nombre}}</option>
+                    </select>
+          
+                  <div class="col-12 display-2--description lh-base">
+                      <div class="input-group flex-nowrap">
+                          <div class="col">
+                            <button (click)="busqueda()" type="submit" class="btn btn-primary btn-lg"> Buscar</button></div>
+                    </div>
+                  </div>
       </div>
       <div class="col-6  display-2--description lh-base">
           <img src="assets/pro.png" class="img-fluid">

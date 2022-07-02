@@ -21,7 +21,7 @@ router.get('/pacientes', async(req,res)=>{
 //Obtener todos los psicologos GET
 router.get('/psicologos', async(req,res)=>{
 	const psicologosAll = await psicologo.find({});
-	res.json(psicologosAll);
+	ngres.json({psicologosAll});
 })
 
 //Obtener todos los administradores GET

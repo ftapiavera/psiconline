@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Tratamiento } from 'src/app/models/tratamiento.model';
 import { Ciudad } from 'src/app/models/ciudades.model';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
-@Injectable()
+
+@Injectable({
+  providedIn: 'root'
+})
 export class BusquedaService {
+
+  private ciudadSeleccionada = "";
+  private tratamientoSeleccionado = "";
+  
+  private urlServer = 'http://localhost:3000';
   private tratamientos: Tratamiento[]=[
     {nombre : "ansiedad", id:1},
     {nombre : "depresion",id:2},
@@ -39,5 +49,13 @@ export class BusquedaService {
   getCiudades(): Ciudad[]{
     return this.ciudades;
   }
-  constructor() { }
+  constructor(private http: HttpClient, private router: Router) { }
+
+  searchPsicologo(){
+      return this.http.get<any>(this.urlServer +'/psicologos');
+  }
+  
+  sendBusquedaP(ciudad:any,tratamiento:any){
+    
+  }
 }
