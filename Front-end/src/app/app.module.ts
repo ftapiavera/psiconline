@@ -30,6 +30,7 @@ import { HistorialMedicoComponent } from './screen/historial-medico/historial-me
 import { CitasMedicoComponent } from './screen/citas-medico/citas-medico.component';
 import { DisponibilidadMedicoComponent } from './screen/disponibilidad-medico/disponibilidad-medico.component';
 import { LoginPsicologoComponent } from './components/login-psicologo/login-psicologo.component';
+import { ListPsicoComponent } from './screen/list-psico/list-psico.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { LoginPsicologoComponent } from './components/login-psicologo/login-psic
     HistorialMedicoComponent,
     CitasMedicoComponent,
     DisponibilidadMedicoComponent,
-    LoginPsicologoComponent
+    LoginPsicologoComponent,
+    ListPsicoComponent
   ],
   imports: [
     BrowserModule,
