@@ -15,6 +15,7 @@ import { LoginAdminComponent } from './screen/loginAdmin/login-admin/login-admin
 import { DashMedicoComponent } from './screen/dash-medico/dash-medico.component';
 import { LoginPsicologoComponent } from './screen/login-psicologo/login-psicologo.component';
 import { ListPsicoComponent } from './screen/list-psico/list-psico.component';
+import {PerfilMedicoComponent} from './screen/perfil-medico/perfil-medico.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path: 'dashMedico', component:DashMedicoComponent},
   {path: 'loginPsico',component:LoginPsicologoComponent},
   {path: 'listPsicologos',component:ListPsicoComponent},
-  {path: 'createPsicologo', component:CreatePsicologoComponent}
+  {path: 'createPsicologo', component:CreatePsicologoComponent},
+  {path: 'psicologoPerfil/:any', component:PerfilMedicoComponent}
 ];
 
 @NgModule({

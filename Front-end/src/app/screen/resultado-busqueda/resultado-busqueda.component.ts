@@ -56,4 +56,9 @@ export class ResultadoBusquedaComponent implements OnInit {
     
   }
 
+  perfilPsico(psicologo:any){
+    console.log(psicologo);
+    this.router.navigate(['/psicologoPerfil/'+psicologo]);
+  }
+
 }
