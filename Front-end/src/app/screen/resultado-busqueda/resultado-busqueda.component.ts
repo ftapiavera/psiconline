@@ -14,21 +14,28 @@ import { BusquedaService } from 'src/app/service/busqueda.service';
 })
 export class ResultadoBusquedaComponent implements OnInit {
   psicologos = [];
-  psicologosSeleccionados = [];
+  psicologosSeleccionados:Array<any> = [];
 
   constructor(private busquedaSvc: BusquedaService,public dataDemo: DatoDemoService,private BusquedaService: BusquedaService,private router: Router) {
     
   }
 
  public ngOnInit(): void {
+
     this.BusquedaService.searchPsicologo()
     .subscribe(
       res => {
         this.psicologos=JSON.parse(JSON.stringify(res.psicologosAll));
-        for(let psicologo1 of this.psicologos){
-          console.log(JSON.parse(JSON.stringify(psicologo1)).nombre);
-          this.psicologosSeleccionados=JSON.parse(JSON.stringify(psicologo1));
+        for(let psicologo of this.psicologos){
+          if(JSON.parse(JSON.stringify(psicologo)).ciudad===localStorage.getItem('ciudad')){
+            this.psicologosSeleccionados.push(JSON.parse(JSON.stringify(psicologo)));
+          }
         }
+        if(this.psicologosSeleccionados.length===0){
+         
+        }
+        console.log(localStorage.getItem('ciudad'));
+    
         
       },
       err => console.log(err)

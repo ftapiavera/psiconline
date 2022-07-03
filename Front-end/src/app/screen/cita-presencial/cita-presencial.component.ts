@@ -4,6 +4,7 @@ import { Ciudad } from 'src/app/models/ciudades.model';
 import { Router } from '@angular/router';
 import { BusquedaService } from 'src/app/service/busqueda.service';
 
+
 @Component({
   selector: 'app-cita-presencial',
   templateUrl: './cita-presencial.component.html',
@@ -14,7 +15,7 @@ export class CitaPresencialComponent implements OnInit {
   public tratamientos: Tratamiento[]=[];
   public ciudades: Ciudad[]=[];
   public selectedTratamiento : Tratamiento={nombre:'',id:0};
-  public selectedCiudad : Ciudad={nombre:' ',id:0};
+  public selectedCiudad:any;
 
   constructor(private busquedaSvc: BusquedaService,private BusquedaService: BusquedaService,private router: Router) {
 
@@ -26,9 +27,9 @@ export class CitaPresencialComponent implements OnInit {
     this.tratamientos = this.busquedaSvc.getTratamientos();
   }
   busqueda(){
-    if(this.selectedCiudad.nombre!==' ' && this.selectedTratamiento.nombre!==' '){
+    if(this.selectedCiudad!==' ' && this.selectedTratamiento.nombre!==' '){
       console.log(this.selectedCiudad,this.selectedTratamiento);
-      this.BusquedaService.sendBusquedaP(this.selectedCiudad,this.selectedTratamiento);
+      localStorage.setItem('ciudad',this.selectedCiudad);
       this.router.navigate(['/resultadoBusqueda']);
     }
     else{

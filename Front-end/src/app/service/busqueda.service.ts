@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable,Output,EventEmitter } from '@angular/core';
 import { Tratamiento } from 'src/app/models/tratamiento.model';
 import { Ciudad } from 'src/app/models/ciudades.model';
 import { HttpClient } from '@angular/common/http';
@@ -10,8 +10,6 @@ import { Router } from '@angular/router';
 })
 export class BusquedaService {
 
-  private ciudadSeleccionada = "";
-  private tratamientoSeleccionado = "";
   
   private urlServer = 'http://localhost:3000';
   private tratamientos: Tratamiento[]=[
@@ -54,12 +52,6 @@ export class BusquedaService {
   searchPsicologo(){
       return this.http.get<any>(this.urlServer +'/psicologos');
   }
-  
-  sendBusquedaP(ciudad:any,tratamiento:any){
-    this.ciudadSeleccionada=ciudad;
-    this.tratamientoSeleccionado=tratamiento;
-  }
-  getCiudadSeleccionada(){
-    return this.ciudadSeleccionada;
-  }
+
+
 }
