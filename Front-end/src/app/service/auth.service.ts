@@ -16,6 +16,10 @@ export class AuthService {
     return this.http.post<any>(this.urlServer + '/signup', user);
   }
 
+  signUpPsico(user:any) {
+    return this.http.post<any>(this.urlServer + '/signpsicologo', user);
+  }
+
   login(user:any) {
     return this.http.post<any>(this.urlServer + '/login', user);
   }

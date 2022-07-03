@@ -1,15 +1,28 @@
 <div class="container">
     <div class="row">
         <div class="list-group">
-          <form>
-
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Apellido">
-            <input type="text" placeholder="Especialidad">
-            <input type="text" placeholder="Ciudad">
-
-            <input type="submit" value="Guardar">
-          </form>
+          <div><h4>Registre un Psicologo, ingrese sus datos a continuación</h4></div>
+          <div>
+            <input [(ngModel)]="user.nombre" id="field-input" type="text" placeholder="Nombre y apellido">
+            <div id="title" type="text">Seleccione Ciudad</div>
+            <select [(ngModel)]="selectedCiudad" class="form-select form-select-lg" id="select">
+              <option *ngFor="let ciudad of ciudades"  value={{ciudad.nombre}}>{{ciudad.nombre}}</option>
+            </select>
+            <input type="text" placeholder="Tipo consulta (Escriba presencial o online)">
+            <div>
+            <div id="title" type="text">Seleccione tratamiento</div>
+            <select [(ngModel)]="selectedTratamiento" class="form-select form-select-lg" id="select">
+              <option *ngFor="let tratamiento of tratamientos"  value={{tratamiento.nombre}}>{{tratamiento.nombre}}</option>
+            </select>
+            </div>
+            <input [(ngModel)]="user.universidad" name="universidad" type="text" placeholder="Universidad">
+            <input [(ngModel)]="user.direccion" type="text" placeholder="Direccion">
+            <input [(ngModel)]="user.telefono" type="text" placeholder="Telefono">
+            <input [(ngModel)]="user.rut" type="text" placeholder="Rut">
+            <input [(ngModel)]="user.email" type="email" placeholder="Mail">
+            <input [(ngModel)]="user.password" type="password" placeholder="Contraseña">
+            <input (click)="crearPsico()" type="submit" value="Guardar">
+        </div>
           </div>
     </div>
 </div>

@@ -27,12 +27,12 @@ const routes: Routes = [
   {path: 'signUp',component:SignUpComponent},
   {path: 'resultadoBusqueda',component:ResultadoBusquedaComponent},
   {path: 'adminDash', component:DashboardAdminComponent},
-  {path: 'createPsicologo', component:CreatePsicologoComponent},
   {path: 'dashboard', component:DashboardPacienteComponent},
   {path: 'loginAdmin',component:LoginAdminComponent},
   {path: 'dashMedico', component:DashMedicoComponent},
   {path: 'loginPsico',component:LoginPsicologoComponent},
-  {path: 'listPsicologos',component:ListPsicoComponent}
+  {path: 'listPsicologos',component:ListPsicoComponent},
+  {path: 'createPsicologo', component:CreatePsicologoComponent}
 ];
 
 @NgModule({

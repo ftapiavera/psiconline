@@ -33,6 +33,7 @@ import { ListPsicoComponent } from './screen/list-psico/list-psico.component';
 import { LoginPsicologoComponent } from './screen/login-psicologo/login-psicologo.component';
 import { NavDashboardPacienteComponent } from './components/nav-dashboard-paciente/nav-dashboard-paciente.component';
 import { NavDashboardAdminComponent } from './components/nav-dashboard-admin/nav-dashboard-admin.component';
+import { CreatePsicologoComponent } from './screen/create-psico/create-psico.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { NavDashboardAdminComponent } from './components/nav-dashboard-admin/nav
     ListPsicoComponent,
     LoginPsicologoComponent,
     NavDashboardPacienteComponent,
-    NavDashboardAdminComponent
+    NavDashboardAdminComponent,
+    CreatePsicologoComponent
   ],
   imports: [
     BrowserModule,

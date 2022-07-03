@@ -5,6 +5,7 @@ import { Ciudad } from 'src/app/models/ciudades.model';
 import { DatoDemoService } from 'src/app/service/data-demo/dato-demo.service';
 import { Router } from '@angular/router';
 import { BusquedaService } from 'src/app/service/busqueda.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-resultado-busqueda',
@@ -44,7 +45,7 @@ export class ResultadoBusquedaComponent implements OnInit {
       let ciu = console.log(localStorage.getItem('ciudad'));
     }
     else{
-      
+
     }
     
   }

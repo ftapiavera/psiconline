@@ -21,5 +21,8 @@ export class DashboardAdminComponent implements OnInit {
   listarPsicologos(){
     this.router.navigate(['/listPsicologos']);
   }
+  crearPsicologo(){
+    this.router.navigate(['/createPsicologo']);
+  }
 
 }
