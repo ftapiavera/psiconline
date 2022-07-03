@@ -21,7 +21,7 @@ export class ResultadoBusquedaComponent implements OnInit {
   }
 
  public ngOnInit(): void {
-
+    
     this.BusquedaService.searchPsicologo()
     .subscribe(
       res => {
@@ -34,13 +34,19 @@ export class ResultadoBusquedaComponent implements OnInit {
         if(this.psicologosSeleccionados.length===0){
          
         }
-        console.log(localStorage.getItem('ciudad'));
+        console.log(localStorage.getItem('tratamiento'));
     
         
       },
       err => console.log(err)
     )
-  
+    if(localStorage.getItem('tipoConsulta')==='presencial'){
+      let ciu = console.log(localStorage.getItem('ciudad'));
+    }
+    else{
+      
+    }
+    
   }
 
 }

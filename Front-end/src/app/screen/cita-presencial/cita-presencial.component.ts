@@ -14,7 +14,7 @@ import { BusquedaService } from 'src/app/service/busqueda.service';
 export class CitaPresencialComponent implements OnInit {
   public tratamientos: Tratamiento[]=[];
   public ciudades: Ciudad[]=[];
-  public selectedTratamiento : Tratamiento={nombre:'',id:0};
+  public selectedTratamiento:any;
   public selectedCiudad:any;
 
   constructor(private busquedaSvc: BusquedaService,private BusquedaService: BusquedaService,private router: Router) {
@@ -30,6 +30,8 @@ export class CitaPresencialComponent implements OnInit {
     if(this.selectedCiudad!==' ' && this.selectedTratamiento.nombre!==' '){
       console.log(this.selectedCiudad,this.selectedTratamiento);
       localStorage.setItem('ciudad',this.selectedCiudad);
+      localStorage.setItem('tipoConsulta','presencial');
+      localStorage.setItem('tratamiento',this.selectedTratamiento);
       this.router.navigate(['/resultadoBusqueda']);
     }
     else{

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tratamiento } from 'src/app/models/tratamiento.model';
 import { DatoDemoService } from 'src/app/service/data-demo/dato-demo.service';
 import { BusquedaService } from 'src/app/service/busqueda.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cita-online',
@@ -11,15 +12,27 @@ import { BusquedaService } from 'src/app/service/busqueda.service';
 })
 export class CitaOnlineComponent implements OnInit {
   public tratamientos: Tratamiento[]=[];
-  public selectedTratamiento : Tratamiento={nombre:'',id:0};
+  public selectedTratamiento:any;
 
-  constructor(private busquedaSvc: BusquedaService) {
+  constructor(private router:Router,private BusquedaService: BusquedaService) {
 
   }
 
   public ngOnInit(): void {
-    console.log(this.busquedaSvc.getTratamientos());
-    this.tratamientos = this.busquedaSvc.getTratamientos();
+    this.tratamientos = this.BusquedaService.getTratamientos();
+  }
+
+  busqueda(){
+    if(this.selectedTratamiento.nombre!==' '){
+      console.log(this.selectedTratamiento);
+      localStorage.setItem('tipoConsulta','presencial');
+      localStorage.setItem('tratamiento',this.selectedTratamiento);
+      this.router.navigate(['/resultadoBusqueda']);
+    }
+    else{
+      alert("Seleccione una opción");
+    }
+  
   }
 
 }
