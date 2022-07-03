@@ -16,6 +16,7 @@ import { AuthService } from 'src/app/service/auth.service';
 export class ResultadoBusquedaComponent implements OnInit {
   psicologos = [];
   psicologosSeleccionados:Array<any> = [];
+  public psicologoSeleccionado:any;
 
   constructor(private busquedaSvc: BusquedaService,public dataDemo: DatoDemoService,private BusquedaService: BusquedaService,private router: Router) {
     
@@ -28,25 +29,30 @@ export class ResultadoBusquedaComponent implements OnInit {
       res => {
         this.psicologos=JSON.parse(JSON.stringify(res.psicologosAll));
         for(let psicologo of this.psicologos){
-          if(JSON.parse(JSON.stringify(psicologo)).ciudad===localStorage.getItem('ciudad')){
-            this.psicologosSeleccionados.push(JSON.parse(JSON.stringify(psicologo)));
+          if(localStorage.getItem('tipoConsulta')==='presencial'){
+            if(JSON.parse(JSON.stringify(psicologo)).ciudad===localStorage.getItem('ciudad')){
+              for(let tratamiento of JSON.parse(JSON.stringify(psicologo)).tratamientos){
+                if(tratamiento === localStorage.getItem('tratamiento')){
+                  this.psicologosSeleccionados.push(JSON.parse(JSON.stringify(psicologo)));
+                }
+              }
+              
+            }
+          }
+          else{
+            for(let tratamiento of JSON.parse(JSON.stringify(psicologo)).tratamientos){
+              if(tratamiento === localStorage.getItem('tratamiento')){
+                this.psicologosSeleccionados.push(JSON.parse(JSON.stringify(psicologo)));
+              }
+            }
+            
           }
         }
-        if(this.psicologosSeleccionados.length===0){
-         
-        }
-        console.log(localStorage.getItem('tratamiento'));
     
         
       },
       err => console.log(err)
     )
-    if(localStorage.getItem('tipoConsulta')==='presencial'){
-      let ciu = console.log(localStorage.getItem('ciudad'));
-    }
-    else{
-
-    }
     
   }
 

@@ -34,7 +34,7 @@ export class CreatePsicologoComponent implements OnInit {
 
   crearPsico(){
     this.user.ciudad = this.selectedCiudad;
-    this.user.tratamiento.push(this.selectedTratamiento);
+    this.user.tratamientos.push(this.selectedTratamiento);
     this.user.tipoConsulta.push(this.selectedConsulta);
     console.log(this.user);
     this.authService.signUpPsico(this.user)
