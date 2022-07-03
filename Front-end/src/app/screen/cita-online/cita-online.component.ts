@@ -24,7 +24,6 @@ export class CitaOnlineComponent implements OnInit {
 
   busqueda(){
     if(this.selectedTratamiento.nombre!==' '){
-      console.log(this.selectedTratamiento);
       localStorage.setItem('tipoConsulta','presencial');
       localStorage.setItem('tratamiento',this.selectedTratamiento);
       this.router.navigate(['/resultadoBusqueda']);

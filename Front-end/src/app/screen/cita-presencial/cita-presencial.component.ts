@@ -22,13 +22,11 @@ export class CitaPresencialComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    console.log(this.busquedaSvc.getCiudades());
     this.ciudades = this.busquedaSvc.getCiudades();
     this.tratamientos = this.busquedaSvc.getTratamientos();
   }
   busqueda(){
     if(this.selectedCiudad!==' ' && this.selectedTratamiento.nombre!==' '){
-      console.log(this.selectedCiudad,this.selectedTratamiento);
       localStorage.setItem('ciudad',this.selectedCiudad);
       localStorage.setItem('tipoConsulta','presencial');
       localStorage.setItem('tratamiento',this.selectedTratamiento);

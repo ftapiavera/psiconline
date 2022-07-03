@@ -41,11 +41,11 @@ export class SignUpComponent implements OnInit {
   signUp(){
     var nombre = this.formulario.get("nombre")?.value+" "+this.formulario.get("apellido")?.value;
     this.paciente = {"nombre":nombre , "email": this.formulario.get("email")?.value,"password":this.formulario.get("password")?.value};
-    console.log(this.paciente);
     this.authService.signUpUser(this.paciente)
     .subscribe(res => {
-        console.log(res);
         localStorage.setItem('token', res.token);
+        alert("El usuario se ha registrado exitosamente");
+        this.router.navigate(['/login']);
       },
       err => console.log(err)
     )

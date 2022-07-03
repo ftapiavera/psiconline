@@ -36,12 +36,10 @@ export class CreatePsicologoComponent implements OnInit {
     this.user.ciudad = this.selectedCiudad;
     this.user.tratamientos.push(this.selectedTratamiento);
     this.user.tipoConsulta.push(this.selectedConsulta);
-    console.log(this.user);
     this.authService.signUpPsico(this.user)
     .subscribe(res => {
-        console.log(res);
         localStorage.setItem('token', res.token);
-        alert("se registró el psicologo correctamente")
+        alert("el psicologo se registró correctamente")
         this.router.navigate(['/adminDash']);
       },
       err => console.log(err)
