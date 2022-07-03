@@ -32,4 +32,8 @@ export class AuthService {
     return this.http.post<any>(this.urlServer + '/admin', user);
   }
 
+  changePassword(passwords: {}) {
+    throw new Error('Method not implemented.');
+  }
+
 }
