@@ -103,6 +103,11 @@ router.post('/admin',async(req,res)=>{
     return res.status(200).json({token});
 })
 
+router.put('/admin/changePassword', async(req, res)=> {
+    const {oldpassword, newpassword} = req.body;
+    console.log(jwt.decode(localStorage.getItem('token')));
+})
+
 //Registro de psicologo POST
 router.post('/signpsicologo', async (req,res)=>{
     const {nombre,rut,tratamientos,email,password,tipoConsulta,universidad,direccion,calificacion,ciudad} = req.body;
