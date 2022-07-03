@@ -20,6 +20,10 @@ export class AuthService {
     return this.http.post<any>(this.urlServer + '/login', user);
   }
 
+  loginPsico(user:any) {
+    return this.http.post<any>(this.urlServer + '/loginpsicologo', user);
+  }
+
   loginAdmin(user:any) {
     return this.http.post<any>(this.urlServer + '/admin', user);
   }

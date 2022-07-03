@@ -1,0 +1,25 @@
+     <div class="box-root padding-top--10 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 8;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h3><a rel="dofollow">Iniciar sesión Psicólogo</a></h3>
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">Ingresa tus datos para iniciar sesión</span>
+              <form [formGroup]="formulario" (ngSubmit)="login()" id="stripe-login" method="post">
+                <div class="field padding-bottom--24">
+                  <input formControlName="email" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                  </div>
+                  <input formControlName="password" type="password" name="password" placeholder="Contraseña">
+                </div>
+                <div class="field padding-bottom--20">
+                  <input type="submit" name="submit" value="Iniciar sesión">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>

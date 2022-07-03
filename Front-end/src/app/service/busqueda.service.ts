@@ -59,4 +59,7 @@ export class BusquedaService {
     this.ciudadSeleccionada=ciudad;
     this.tratamientoSeleccionado=tratamiento;
   }
+  getCiudadSeleccionada(){
+    return this.ciudadSeleccionada;
+  }
 }

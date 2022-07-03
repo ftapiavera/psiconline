@@ -98,8 +98,8 @@ router.post('/admin',async(req,res)=>{
 
 //Registro de psicologo POST
 router.post('/signpsicologo', async (req,res)=>{
-    const {nombre,rut,tratamientos,mail,password,tipoConsulta,universidad,direccion,calificacion,ciudad} = req.body;
-    const newPsicologo = new psicologo({nombre,rut,tratamientos,mail,password,tipoConsulta,universidad,direccion,calificacion,ciudad})
+    const {nombre,rut,tratamientos,email,password,tipoConsulta,universidad,direccion,calificacion,ciudad} = req.body;
+    const newPsicologo = new psicologo({nombre,rut,tratamientos,email,password,tipoConsulta,universidad,direccion,calificacion,ciudad})
     await newPsicologo.save();
     console.log(newPsicologo)
     
@@ -109,9 +109,9 @@ router.post('/signpsicologo', async (req,res)=>{
 
 //Inicio de sesion para psicologo POST
 router.post('/loginpsicologo',async(req,res)=>{
-    const {mail, password } = req.body;
-    const Psicologo = await psicologo.findOne({mail});
-    if (!Psicologo) return res.status(401).send("El usuario administrador ingresado es incorrecto");
+    const {email, password } = req.body;
+    const Psicologo = await psicologo.findOne({email});
+    if (!Psicologo) return res.status(401).send("El usuario psicologo ingresado es incorrecto");
     if (Psicologo.password !== password) return res.status(401).send("La constraseña no es correcta");
     
     const token = jwt.sign({_id: psicologo}, process.env.DB_PASSWORD);

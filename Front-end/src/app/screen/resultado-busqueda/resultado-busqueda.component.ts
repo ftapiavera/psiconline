@@ -24,9 +24,10 @@ export class ResultadoBusquedaComponent implements OnInit {
     this.BusquedaService.searchPsicologo()
     .subscribe(
       res => {
-        this.psicologos=res.psicologosAll;
+        this.psicologos=JSON.parse(JSON.stringify(res.psicologosAll));
         for(let psicologo1 of this.psicologos){
-          console.log(psicologo1);
+          console.log(JSON.parse(JSON.stringify(psicologo1)).nombre);
+          this.psicologosSeleccionados=JSON.parse(JSON.stringify(psicologo1));
         }
         
       },
