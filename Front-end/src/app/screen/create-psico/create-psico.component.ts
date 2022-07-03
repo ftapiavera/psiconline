@@ -16,6 +16,8 @@ import { Router } from '@angular/router';
 export class CreatePsicologoComponent implements OnInit {
   public tratamientos: Tratamiento[]=[];
   public selectedTratamiento:any;
+  public consultas:Array<String>=["presencial","online"];
+  public selectedConsulta:any;
   public ciudades: Tratamiento[]=[];
   public selectedCiudad:any;
   public user:any = {};
@@ -32,7 +34,8 @@ export class CreatePsicologoComponent implements OnInit {
 
   crearPsico(){
     this.user.ciudad = this.selectedCiudad;
-    this.user.tratamiento=this.selectedTratamiento;
+    this.user.tratamiento.push(this.selectedTratamiento);
+    this.user.tipoConsulta.push(this.selectedConsulta);
     console.log(this.user);
     this.authService.signUpPsico(this.user)
     .subscribe(res => {

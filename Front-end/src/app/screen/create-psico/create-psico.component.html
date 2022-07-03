@@ -8,7 +8,10 @@
             <select [(ngModel)]="selectedCiudad" class="form-select form-select-lg" id="select">
               <option *ngFor="let ciudad of ciudades"  value={{ciudad.nombre}}>{{ciudad.nombre}}</option>
             </select>
-            <input type="text" placeholder="Tipo consulta (Escriba presencial o online)">
+            <div id="title" type="text">Seleccione tipo consulta</div>
+            <select [(ngModel)]="selectedConsulta" class="form-select form-select-lg" id="select">
+              <option *ngFor="let consulta of consultas"  value={{consulta}}>{{consulta}}</option>
+            </select>
             <div>
             <div id="title" type="text">Seleccione tratamiento</div>
             <select [(ngModel)]="selectedTratamiento" class="form-select form-select-lg" id="select">
