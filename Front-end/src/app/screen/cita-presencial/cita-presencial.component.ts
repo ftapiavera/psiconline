@@ -26,8 +26,15 @@ export class CitaPresencialComponent implements OnInit {
     this.tratamientos = this.busquedaSvc.getTratamientos();
   }
   busqueda(){
-    console.log(this.selectedCiudad);
-    this.BusquedaService.sendBusquedaP(this.selectedCiudad,this.selectedTratamiento);
+    if(this.selectedCiudad.nombre!==' ' && this.selectedTratamiento.nombre!==' '){
+      console.log(this.selectedCiudad,this.selectedTratamiento);
+      this.BusquedaService.sendBusquedaP(this.selectedCiudad,this.selectedTratamiento);
+      this.router.navigate(['/resultadoBusqueda']);
+    }
+    else{
+      alert("Seleccione una opción");
+    }
+  
   }
 
 }

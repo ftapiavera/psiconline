@@ -21,7 +21,7 @@ router.get('/pacientes', async(req,res)=>{
 //Obtener todos los psicologos GET
 router.get('/psicologos', async(req,res)=>{
 	const psicologosAll = await psicologo.find({});
-	ngres.json({psicologosAll});
+	res.json({psicologosAll});
 })
 
 //Obtener todos los administradores GET
@@ -98,8 +98,8 @@ router.post('/admin',async(req,res)=>{
 
 //Registro de psicologo POST
 router.post('/signpsicologo', async (req,res)=>{
-    const {nombre,rut,mail,password} = req.body;
-    const newPsicologo = new psicologo({nombre,rut,mail,password})
+    const {nombre,rut,tratamientos,mail,password,tipoConsulta,universidad,direccion,calificacion,ciudad} = req.body;
+    const newPsicologo = new psicologo({nombre,rut,tratamientos,mail,password,tipoConsulta,universidad,direccion,calificacion,ciudad})
     await newPsicologo.save();
     console.log(newPsicologo)
     

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Psicologo } from 'src/app/models/psicologo.model';
+import { Tratamiento } from 'src/app/models/tratamiento.model';
+import { Ciudad } from 'src/app/models/ciudades.model';
 import { DatoDemoService } from 'src/app/service/data-demo/dato-demo.service';
 import { Router } from '@angular/router';
 import { BusquedaService } from 'src/app/service/busqueda.service';
@@ -7,23 +9,30 @@ import { BusquedaService } from 'src/app/service/busqueda.service';
 @Component({
   selector: 'app-resultado-busqueda',
   templateUrl: './resultado-busqueda.component.html',
-  styleUrls: ['./resultado-busqueda.component.sass']
+  styleUrls: ['./resultado-busqueda.component.sass'],
+  providers: [BusquedaService]
 })
 export class ResultadoBusquedaComponent implements OnInit {
   psicologos = [];
+  psicologosSeleccionados = [];
 
-  constructor(public dataDemo: DatoDemoService,private BusquedaService: BusquedaService,private router: Router) {
+  constructor(private busquedaSvc: BusquedaService,public dataDemo: DatoDemoService,private BusquedaService: BusquedaService,private router: Router) {
     
   }
 
-  ngOnInit(): void {
+ public ngOnInit(): void {
     this.BusquedaService.searchPsicologo()
     .subscribe(
       res => {
-        this.psicologos = res;
+        this.psicologos=res.psicologosAll;
+        for(let psicologo1 of this.psicologos){
+          console.log(psicologo1);
+        }
+        
       },
       err => console.log(err)
     )
+  
   }
 
 }

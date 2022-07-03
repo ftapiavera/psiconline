@@ -56,6 +56,7 @@ export class BusquedaService {
   }
   
   sendBusquedaP(ciudad:any,tratamiento:any){
-    
+    this.ciudadSeleccionada=ciudad;
+    this.tratamientoSeleccionado=tratamiento;
   }
 }
