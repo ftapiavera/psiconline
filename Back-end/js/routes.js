@@ -128,4 +128,29 @@ router.post('/loginpsicologo',async(req,res)=>{
     const token = jwt.sign({_id: psicologo}, process.env.DB_PASSWORD);
     return res.status(200).json({token});
 })
+
+//Eliminar psicologo DELETE
+router.delete('/psicologos/:id',async(req,res)=>{
+    const id = req.params.id;
+    console.log({id});
+    try{
+        const psico = await psicologo.findByIdAndDelete({_id: id});
+        console.log(psico);
+        if(!psico){
+            res.json({
+                status: false,
+                messeage: 'No existe'
+            })
+        }
+        else{
+            res.json({
+                status: true,
+                messeage: 'Eliminado'
+            })
+        }
+    } catch (err){
+        console.log(err)
+    }
+   
+})
 module.exports = router;

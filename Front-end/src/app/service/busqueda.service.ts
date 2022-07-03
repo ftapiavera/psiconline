@@ -53,5 +53,10 @@ export class BusquedaService {
       return this.http.get<any>(this.urlServer +'/psicologos');
   }
 
+  deletePsicologo(user:any) {
+    console.log(user._id);
+    
+    this.http.delete(this.urlServer + '/psicologos/'+user._id);
+  }
 
 }

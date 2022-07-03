@@ -26,4 +26,11 @@ export class ListPsicoComponent implements OnInit {
       err => console.log(err)
     )
   }
+
+  eliminarPsico(psicologo:any){
+    console.log(psicologo);
+    
+    this.BusquedaService.deletePsicologo(psicologo);
+    this.router.navigate(['/listPsicologos']);
+  }
 }
