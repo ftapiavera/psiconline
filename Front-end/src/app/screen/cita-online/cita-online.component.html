@@ -1,9 +1,9 @@
   
   <div class="container-fluid text-center" id="block">  
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
       <h5>Encuentra y agenda citas con profesionales de psicología especialistas en numerosos temas de salud mental de manera presencial y remota.</h5></div>
     <div class="row">
-      <div class="display-2--description lh-base text-black-50 col-6 text-center" id="reserva">
+      <div class="display-2--description lh-base text-black-50 col-md-6 text-center" id="reserva">
                <div class="d-grid gap-2 d-md-block">
                  <button class="btn btn-primary btn-lg" routerLink="/citaPresencial">Cita presencial</button>
                  <button class="btn btn-primary active btn-lg" routerLink="/citaOnline">Cita online</button>
@@ -11,7 +11,7 @@
                 <div>Seleccione Tratamiento</div>
                 <select [(ngModel)]="selectedTratamiento.id" class="form-select form-select-lg" id="select">
                     <option *ngFor="let tratamiento of tratamientos" value={{tratamiento.id}}>{{tratamiento.nombre}}</option>
-                  </select>
+                </select>
           
                   <div class="col-12 display-2--description lh-base">
                       <div class="input-group flex-nowrap">
@@ -22,7 +22,7 @@
                   </div>
               
       </div>
-      <div class="col-6  display-2--description lh-base">
+      <div class="col-md-6 display-2--description lh-base d-none d-md-block">
           <img src="assets/pro.png" class="img-fluid">
         </div>
     </div>
