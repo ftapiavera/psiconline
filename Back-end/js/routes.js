@@ -105,7 +105,6 @@ router.post('/admin',async(req,res)=>{
 
 router.put('/admin/changePassword', async(req, res)=> {
     const {oldpassword, newpassword} = req.body;
-    console.log(jwt.decode(localStorage.getItem('token')));
 })
 
 //Registro de psicologo POST
