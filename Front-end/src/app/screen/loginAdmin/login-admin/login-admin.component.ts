@@ -25,7 +25,7 @@ export class LoginAdminComponent implements OnInit {
   autorizacion(){
     this.administrador = this.formulario.value;
     console.log(this.administrador);
-    this.authService.login(this.administrador)
+    this.authService.loginAdmin(this.administrador)
       .subscribe(
         res => {
           console.log(res);
