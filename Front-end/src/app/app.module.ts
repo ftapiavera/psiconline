@@ -34,6 +34,9 @@ import { LoginPsicologoComponent } from './screen/login-psicologo/login-psicolog
 import { NavDashboardPacienteComponent } from './components/nav-dashboard-paciente/nav-dashboard-paciente.component';
 import { NavDashboardAdminComponent } from './components/nav-dashboard-admin/nav-dashboard-admin.component';
 import { CreatePsicologoComponent } from './screen/create-psico/create-psico.component';
+import { PasswordAdminComponent } from './screen/password-admin/password-admin.component';
+import { PasswordPsicoComponent } from './screen/password-psico/password-psico.component';
+import { PasswordUserComponent } from './screen/password-user/password-user.component';
 
 
 @NgModule({
@@ -64,7 +67,10 @@ import { CreatePsicologoComponent } from './screen/create-psico/create-psico.com
     LoginPsicologoComponent,
     NavDashboardPacienteComponent,
     NavDashboardAdminComponent,
-    CreatePsicologoComponent
+    CreatePsicologoComponent,
+    PasswordAdminComponent,
+    PasswordPsicoComponent,
+    PasswordUserComponent
   ],
   imports: [
     BrowserModule,
