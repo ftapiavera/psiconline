@@ -31,6 +31,7 @@ export class ListPsicoComponent implements OnInit {
     console.log(psicologo);
     
     this.BusquedaService.deletePsicologo(psicologo);
-    this.router.navigate(['/listPsicologos']);
+    this.ngOnInit();
+    //this.router.navigate(['/listPsicologos']);
   }
 }
