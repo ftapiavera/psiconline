@@ -103,8 +103,20 @@ router.post('/admin',async(req,res)=>{
     return res.status(200).json({token});
 })
 
+//Cambio de contraseña PUT
 router.put('/admin/changePassword', async(req, res)=> {
-    console.log(req.body);
+    const {oldpassword, newpassword,_id} = req.body;
+    console.log(oldpassword);
+    const password = await encrypt(newpassword);
+    const Admin = await administrador.findById({_id});
+    const checkPassword = await compare(oldpassword,Admin.password);
+    if (!Admin) return res.status(401).send("El usuario administrador ingresado es incorrecto");
+    if (!checkPassword) return res.status(401).send("La constraseña no es correcta");
+    const Admin2 = await administrador.findOneAndUpdate({_id},{password:password});
+    if(Admin2){
+        return res.json({status: true,message: 'Eliminado'});
+    }
+    return res.status(401).send("El usuario no se encontró");
 })
 
 //Registro de psicologo POST
@@ -143,13 +155,13 @@ router.delete('/psicologos/:id',async(req,res)=>{
         if(!psico){
             res.json({
                 status: false,
-                messeage: 'No existe'
+                message: 'No existe'
             })
         }
         else{
             res.json({
                 status: true,
-                messeage: 'Eliminado'
+                message: 'Eliminado'
             })
         }
     } catch (err){
