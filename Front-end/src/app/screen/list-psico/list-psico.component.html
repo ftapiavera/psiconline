@@ -16,15 +16,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><button>Eliminar</button></td>
-                    <td></td>
-                  </tr>
+                    <tr *ngFor="let psicologo of listPsicologos">
+                      <td></td>
+                      <td>{{psicologo.nombre}}</td>
+                      <td>{{psicologo.tratamientos}}</td>
+                      <td>{{psicologo.ciudad}}</td>
+                      <td></td>
+                      <td><button>Eliminar</button></td>
+                      <td></td>
+                    </tr>
                 </tbody>
                 </table>
         </div>   

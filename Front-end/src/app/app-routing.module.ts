@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'loginAdmin',component:LoginAdminComponent},
   {path: 'dashMedico', component:DashMedicoComponent},
   {path: 'loginPsico',component:LoginPsicologoComponent},
-  {path: 'psicologos',component:ListPsicoComponent}
+  {path: 'listPsicologos',component:ListPsicoComponent}
 ];
 
 @NgModule({
