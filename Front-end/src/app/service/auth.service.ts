@@ -33,7 +33,8 @@ export class AuthService {
   }
 
   changePassword(passwords:any) {
-    this.http.put(this.urlServer +'/changePassword', passwords);
+    console.log(passwords);
+    return this.http.put(this.urlServer +'/admin/changePassword', passwords);
   }
 
 }
