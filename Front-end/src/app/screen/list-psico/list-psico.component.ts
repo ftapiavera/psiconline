@@ -14,6 +14,13 @@ export class ListPsicoComponent implements OnInit {
   listPsicologos:Array<any> = [];
   constructor(private BusquedaService: BusquedaService,private router: Router) { }
 
+  reloadComponent() {
+    let currentUrl = this.router.url;
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate([currentUrl]);
+    }
+
   ngOnInit(): void {
     this.BusquedaService.searchPsicologo()
     .subscribe(
@@ -31,7 +38,7 @@ export class ListPsicoComponent implements OnInit {
     console.log(psicologo);
     
     this.BusquedaService.deletePsicologo(psicologo);
-    this.ngOnInit();
+    this.reloadComponent();
     //this.router.navigate(['/listPsicologos']);
   }
 }
