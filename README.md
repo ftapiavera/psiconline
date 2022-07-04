@@ -42,3 +42,10 @@ Para ingresar como usuario Administrador se deben introducir las siguientes cred
 Usuario: AdministradorPsiconline
 
 Password: 87k3hT5gs821Hb6aw
+
+## Variables de entorno:
+NODE_ENV=development
+DB_HOST=3000
+DB_USER=root
+DB_PASSWORD='Tgs87Y4fRW0'
+DB_NAME='mongodb://localhost/psiconline-db'
