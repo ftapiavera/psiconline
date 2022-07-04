@@ -25,7 +25,7 @@ export class PasswordAdminComponent implements OnInit {
     this.passwords = this.formulario.value;
     var pass = this.passwords;
     let cambio = [pass, localStorage.getItem('token')];
-    this.authService.changePassword(cambio);
+    console.log(this.authService.changePassword(cambio));
   }
 
 }
