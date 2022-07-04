@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/service/auth.service';
 @Component({
   selector: 'app-password-admin',
   templateUrl: './password-admin.component.html',
-  styleUrls: ['./password-admin.component.css']
+  styleUrls: ['./password-admin.component.sass']
 })
 export class PasswordAdminComponent implements OnInit {
 
