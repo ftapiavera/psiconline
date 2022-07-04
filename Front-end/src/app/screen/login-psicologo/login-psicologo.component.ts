@@ -29,6 +29,7 @@ export class LoginPsicologoComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
+          localStorage.setItem('emailP',this.formulario.get('email')?.value);
           this.router.navigate(['/dashMedico']);
         },
         err => console.log(err)

@@ -17,6 +17,8 @@ import { LoginPsicologoComponent } from './screen/login-psicologo/login-psicolog
 import { ListPsicoComponent } from './screen/list-psico/list-psico.component';
 import {PerfilMedicoComponent} from './screen/perfil-medico/perfil-medico.component';
 import { PasswordAdminComponent } from './screen/password-admin/password-admin.component';
+import { PasswordUserComponent } from './screen/password-user/password-user.component';
+import { PasswordPsicoComponent } from './screen/password-psico/password-psico.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -36,7 +38,9 @@ const routes: Routes = [
   {path: 'listPsicologos',component:ListPsicoComponent},
   {path: 'createPsicologo', component:CreatePsicologoComponent},
   {path: 'psicologoPerfil/:any', component:PerfilMedicoComponent},
-  {path: 'admin/change', component:PasswordAdminComponent}
+  {path: 'cambioPasswordAdmin',component:PasswordAdminComponent},
+  {path: 'cambioPasswordUser', component:PasswordUserComponent},
+  {path: 'cambioPasswordPsico', component:PasswordPsicoComponent}
 ];
 
 @NgModule({

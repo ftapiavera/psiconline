@@ -24,5 +24,8 @@ export class DashboardAdminComponent implements OnInit {
   crearPsicologo(){
     this.router.navigate(['/createPsicologo']);
   }
+  cambiarContrasena(){
+    this.router.navigate(['/cambioPasswordAdmin']);
+  }
 
 }

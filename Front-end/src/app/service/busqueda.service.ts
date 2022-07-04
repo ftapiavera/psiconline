@@ -54,8 +54,6 @@ export class BusquedaService {
   }
 
   deletePsicologo(user:any) {
-    console.log(user);
-    
     this.http.delete(this.urlServer + '/psicologos/'+user).subscribe(
       data => console.log('success', data),
       error => console.log('oops', error)

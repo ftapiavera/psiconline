@@ -39,6 +39,7 @@ import { PasswordPsicoComponent } from './screen/password-psico/password-psico.c
 import { PasswordUserComponent } from './screen/password-user/password-user.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

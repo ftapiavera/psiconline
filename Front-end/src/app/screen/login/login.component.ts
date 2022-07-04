@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
+          localStorage.setItem('emailU',this.formulario.get('email')?.value);
           this.router.navigate(['/dashboard']);
         },
         err => console.log(err)

@@ -12,8 +12,10 @@ import { AuthService } from 'src/app/service/auth.service';
 export class PasswordAdminComponent implements OnInit {
 
   formulario:FormGroup;
-  passwords={};
-  constructor(public FormB:FormBuilder,private authService: AuthService, router: Router) {
+  passwords=[];
+  public mensaje:any = {};
+
+  constructor(public FormB:FormBuilder,private authService: AuthService,private router: Router) {
     this.formulario = this.FormB.group({
       oldpassword: ["",[Validators.required,Validators.maxLength(8)]],
       newpassword: ["",[Validators.required,Validators.maxLength(8)]]
@@ -22,10 +24,15 @@ export class PasswordAdminComponent implements OnInit {
   ngOnInit(): void {
   }
   changePassword(){
-    this.passwords = this.formulario.value;
-    var pass = this.passwords;
-    let cambio = [pass, localStorage.getItem('token')];
-    console.log(this.authService.changePassword(cambio));
+    this.mensaje.oldpassword = this.formulario.get('oldpassword')?.value;
+    this.mensaje.newpassword = this.formulario.get('newpassword')?.value;
+    this.mensaje.usuario = localStorage.getItem('usuario');    
+    this.authService.changePasswordAdmin(this.mensaje);
+
+  }
+
+  volver(){
+    this.router.navigate(['/adminDash']);
   }
 
 }

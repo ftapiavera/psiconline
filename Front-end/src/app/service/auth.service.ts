@@ -32,9 +32,26 @@ export class AuthService {
     return this.http.post<any>(this.urlServer + '/admin', user);
   }
 
-  changePassword(passwords:any) {
-    console.log(passwords);
-    return this.http.put(this.urlServer +'/admin/changePassword', passwords);
+  changePasswordAdmin(passwords:any) {
+    this.http.put<any>(this.urlServer +'/admin/changePassword', passwords).subscribe(
+      data => console.log('success', data),
+      error => console.log('oops', error)
+    );
+  }
+  
+
+  changePasswordPsico(passwords:any) {
+    this.http.put<any>(this.urlServer +'/psicologo/changePassword', passwords).subscribe(
+      data => console.log('success', data),
+      error => console.log('oops', error)
+    );
+  }
+
+  changePasswordUser(passwords:any) {
+    this.http.put<any>(this.urlServer +'/paciente/changePassword', passwords).subscribe(
+      data => console.log('success', data),
+      error => console.log('oops', error)
+     );
   }
 
 }

@@ -29,7 +29,7 @@ export class LoginAdminComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
-          //localStorage.setItem('idUsr', res.)
+          localStorage.setItem('usuario',this.formulario.get('usuario')?.value);
           this.router.navigate(['/adminDash']);
         },
         err => console.log(err)

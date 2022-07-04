@@ -100,23 +100,53 @@ router.post('/admin',async(req,res)=>{
     if (!checkPassword) return res.status(401).send("La constraseña no es correcta");
     
     const token = jwt.sign({_id: administrador}, process.env.DB_PASSWORD);
+    const _id = Admin._id;
     return res.status(200).json({token});
 })
 
 //Cambio de contraseña PUT
 router.put('/admin/changePassword', async(req, res)=> {
-    const {oldpassword, newpassword,_id} = req.body;
-    console.log(oldpassword);
+    const {oldpassword, newpassword,usuario} = req.body;
     const password = await encrypt(newpassword);
-    const Admin = await administrador.findById({_id});
+    const Admin = await administrador.findOne({usuario});
     const checkPassword = await compare(oldpassword,Admin.password);
     if (!Admin) return res.status(401).send("El usuario administrador ingresado es incorrecto");
     if (!checkPassword) return res.status(401).send("La constraseña no es correcta");
-    const Admin2 = await administrador.findOneAndUpdate({_id},{password:password});
+    const Admin2 = await administrador.findOneAndUpdate({usuario},{password:password});
     if(Admin2){
-        return res.json({status: true,message: 'Eliminado'});
+        return res.json({status: true,message: 'Se actualizo la constraseña correctamente'});
     }
-    return res.status(401).send("El usuario no se encontró");
+    return res.json({status: false, message:"El usuario no se encontró"});
+})
+
+//Cambio de contraseña PUT
+router.put('/psicologo/changePassword', async(req, res)=> {
+    const {oldpassword, newpassword,email} = req.body;
+    const password = await encrypt(newpassword);
+    const Psico = await administrador.findOne({email});
+    const checkPassword = await compare(oldpassword,Psico.password);
+    if (!Psico) return res.status(401).send("El usuario administrador ingresado es incorrecto");
+    if (!checkPassword) return res.status(401).send("La constraseña no es correcta");
+    const Psico2 = await psicologo.findOneAndUpdate({email},{password:password});
+    if(Psico2){
+        return res.json({status: true,message: 'Se actualizo la constraseña correctamente'});
+    }
+    return res.json({status: false, message:"El usuario no se encontró"});
+})
+
+//Cambio de contraseña PUT
+router.put('/paciente/changePassword', async(req, res)=> {
+    const {oldpassword, newpassword,email} = req.body;
+    const password = await encrypt(newpassword);
+    const Paciente = await paciente.findOne({email});
+    const checkPassword = await compare(oldpassword,Paciente.password);
+    if (!Paciente) return res.status(401).send("El usuario ingresado es incorrecto");
+    if (!checkPassword) return res.status(401).send("La constraseña no es correcta");
+    const Paciente2 = await paciente.findOneAndUpdate({email},{password:password});
+    if(Paciente2){
+        return res.json({status: true,message: 'Se actualizo la constraseña correctamente'});
+    }
+    return res.json({status: false, message:"El usuario no se encontró"});
 })
 
 //Registro de psicologo POST
@@ -148,10 +178,8 @@ router.post('/loginpsicologo',async(req,res)=>{
 //Eliminar psicologo DELETE
 router.delete('/psicologos/:id',async(req,res)=>{
     const id = req.params.id;
-    console.log({id});
     try{
         const psico = await psicologo.findByIdAndDelete({_id: id});
-        console.log(psico);
         if(!psico){
             res.json({
                 status: false,
